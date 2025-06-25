@@ -1,13 +1,9 @@
----
-
----
+# Algebra review
 
 ## 1. Trigonometry
-![[images/trigonometry_angle_figure1.png]]
-
+![Trigonometry Angle Figure 1](images/trigonometry_angle_figure1.png)
 
 ### 1.1  Angles
-
 $$
 \theta = \frac{a}{r}
 $$
@@ -119,7 +115,7 @@ $$
 
 ![[images/trigonometry_graph_2.png]]
 
----
+
 ## 2. Sigma Notations
 
 ### Theorem: Properties of Summation
@@ -140,20 +136,20 @@ $$
 $$
 ### Theorem: Common Summation Formulas
 Let  $c$  be a constant and $n$  a positive integer. Then:
+1. $$
+\sum_{i=1}^{n} 1 = n
 $$
-1. \sum_{i=1}^{n} 1 = n
+2. $$
+\sum_{i=1}^{n} c = nc
 $$
+3. $$
+\sum_{i=1}^{n} i = \frac{n(n + 1)}{2}
 $$
-2. \sum_{i=1}^{n} c = nc
+4. $$
+\sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
 $$
-$$
-3. \sum_{i=1}^{n} i = \frac{n(n + 1)}{2}
-$$
-$$
-4. \sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
-$$
-$$
-5. \sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2
+5. $$
+\sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2
 $$
 #### *5. Proof by Mathematical Induction*
 
@@ -189,7 +185,6 @@ Use the inductive hypothesis:
 
 $$
 = \left( \frac{k(k + 1)}{2} \right)^2 + (k + 1)^3 
-
 = (k + 1)^2 \left[ \left( \frac{k}{2} \right)^2 + (k + 1) \right]
 $$
 
@@ -246,7 +241,7 @@ $$
 P(x) = a_nx^n + \cdots + a_1x + a_0
 $$
 
-> [!NOTE] **Theorem:**
+> **Theorem:**
 > If a rational number $\frac{p}{q}$  (in lowest terms) is a root of the polynomial, then:
 > 
 > - $p$ must divide the **constant term** $a_0$  
@@ -281,7 +276,9 @@ Then use **polynomial division** to factor:
 $$
 P(x) = (x - 2)(2x^2 + x - 3)
 $$
+
 ---
+
 #### *Descartes’ Rule of Signs — Explanation*
 **Descartes’ Rule of Signs** is a method to estimate the number of **positive** and **negative** real roots of a polynomial equation by examining the signs of its coefficients.
 
@@ -501,9 +498,6 @@ $$
 \end{document}
 ```
 
-```tikz
-
-```
  - **Vertical major axis:**
 $$
 \frac{x^2}{b^2} + \frac{y^2}{a^2} = 1 \quad (a > b)

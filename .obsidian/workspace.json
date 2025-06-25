@@ -11,12 +11,14 @@
             "id": "6d92d421898b6986",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/trigonometry_angle_figure1.png"
+                "file": "obisdian_source/Algebra review.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "trigonometry_angle_figure1"
+              "icon": "lucide-file",
+              "title": "Algebra review"
             }
           }
         ]
@@ -178,23 +180,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6d92d421898b6986",
+  "active": "999cfb68900f237c",
   "lastOpenFiles": [
+    "obisdian_source/images/tikz_svg/README.txt",
+    "obisdian_source/images/tikz_svg/replace_tikz_in_markdown.py",
+    "obisdian_source/images/tikz_svg/generate_svg.bat",
+    "obisdian_source/images/tikz_svg/README.md",
+    "obisdian_source/images/tikz_svg/tikz_to_svg.py",
+    "obisdian_source/images/tikz_svg",
+    "obisdian_source/images/trigonometry_graph_2.png",
+    "obisdian_source/images/functions_3.png",
+    "obisdian_source/images/trigonometry_angle_figure1.png",
+    "obisdian_source/images/elementary_functions_2.png",
+    "obisdian_source/images/elementary_functions_1.png",
+    "obisdian_source/images",
+    "calculus_pdf/Algebra review.pdf",
+    "images/trigonometry_graph_2.png",
+    "images/elementary_functions_1.png",
+    "images/trigonometry_angle_figure1.png",
     "calculus/Algebra review.md",
     "obisdian_source/Algebra review.md",
     "obisdian_source",
-    "calculus_pdf/Algebra review.pdf",
     "calculus_pdf",
     "新建文件夹",
-    "images/trigonometry_angle_figure1.png",
     "calculus",
-    "images/elementary_functions_1.png",
-    "images",
     "images/functions_3.png",
     "elem_func_3.png",
-    "elem_func_4.png.png",
-    "images/elementary_functions_2.png",
-    "Welcome.md",
-    "images/trigonometry_graph_2.png"
+    "Welcome.md"
   ]
 }
