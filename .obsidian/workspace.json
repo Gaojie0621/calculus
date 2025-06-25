@@ -150,9 +150,19 @@
               "icon": "lucide-list",
               "title": "Outline of Algebra review"
             }
+          },
+          {
+            "id": "27665312923c3431",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -167,11 +177,12 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "copilot:Open Copilot Chat": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "6d92d421898b6986",
   "lastOpenFiles": [
+    "images/trigonometry_angle_figure1.png",
     "calculus/Algebra review.md",
     "calculus",
     "images/elementary_functions_1.png",
@@ -181,7 +192,6 @@
     "elem_func_4.png.png",
     "images/elementary_functions_2.png",
     "Welcome.md",
-    "images/trigonometry_graph_2.png",
-    "images/trigonometry_angle_figure1.png"
+    "images/trigonometry_graph_2.png"
   ]
 }

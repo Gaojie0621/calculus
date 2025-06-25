@@ -3,7 +3,8 @@
 ---
 
 ## 1. Trigonometry
-![[trigonometry_angle_figure1.png]]
+![[images/trigonometry_angle_figure1.png]]
+
 
 ### 1.1  Angles
 
@@ -116,7 +117,7 @@ $$
 \sin y = \sin\left(\frac{x+y}{2} - \frac{x-y}{2}\right)
 $$
 
-![[trigonometry_graph_2.png]]
+![[images/trigonometry_graph_2.png]]
 
 ---
 ## 2. Sigma Notations
@@ -377,7 +378,7 @@ $$
 ### 4.1 circles
 
 **Equation of a Circle** :
-**$$(x - a)^2 + (y - b)^2 = r^2$$
+$$(x - a)^2 + (y - b)^2 = r^2$$
 
 ```tikz
 \begin{document}
@@ -504,7 +505,7 @@ $$
 
 ```
  - **Vertical major axis:**
-$$ 
+$$
 \frac{x^2}{b^2} + \frac{y^2}{a^2} = 1 \quad (a > b)
 $$
 
@@ -619,7 +620,7 @@ $$
 
 ##### Definition
 The natural exponential function is defined as:
-$$ y = e^x $$
+$$y = e^x$$
 where:
 - $e \approx 2.71828$ (Euler's number)
 - The function equals its own derivative: $\frac{dy}{dx} = e^x$
@@ -727,7 +728,7 @@ The tangent line at x=0 has:
   - $\sqrt{x} = x^{1/2}$: Domain $[0, +\infty)$
  
  (i)  $a = n$, where $n$ is a positive integer:
- ![[elementary_functions_1.png]]
+ ![[images/elementary_functions_1.png]]
  (ii)  $a = \frac{1}{n}$, where $n$ is a positive integer:
  - The function $f(x) = x^{\frac{1}{n}} = \sqrt[n]{x}$ is a root function
 ![[elementary_functions_2.png]]
@@ -843,7 +844,7 @@ For any function $y = f(x)$:
 1. **Scaling**:
    - Vertical: $y = A f(x)$ (stretch if $|A| > 1$, shrink if $0 < |A| < 1$)
    - Horizontal: $y = f(Bx)$ (compressed if $|B| > 1$, stretched if $0 < |B| < 1$)
-![[functions_3.png]]
+![[images/functions_3.png]]
 1. **Reflection**:
    - $y = -f(x)$ (flip vertically)
    - $y = f(-x)$ (flip horizontally)
@@ -909,7 +910,7 @@ intersects its graph more than once.
 
 **Definition 2** 
 Let $f$ be a one-to-one function with domain $A$ and range $B$.  
-Then its ***inverse function*** $f^{-1}$has domain $B$ and range $A$, and is defined by
+Then its ***inverse function*** $f^{-1}$ has domain $B$ and range $A$, and is defined by
 
 $$
 f^{-1}(y) = x \quad \text{if and only if} \quad f(x) = y
@@ -926,18 +927,18 @@ for any $y \in B$.
 
 ##### How to Find the Inverse Function of a One-to-One Function $f$
 
-**Step 1**: Write the equation  
+**Step 1**: Write the equation 
 $$
 y = f(x)
 $$
 
 **Step 2**: Solve this equation for $x$ in terms of $y$ (if possible): $\boxed{f(y) = x}$
 
-**Step 3**: Interchange $x$ and $y$ to express $f^{-1}$ as a function of $x$:  
+**Step 3**: Interchange $x$ and $y$ to express $f^{-1}$ as a function of $x$: 
 $$
 y = f^{-1}(x)
 $$
-**Example**  
+**Example** 
 Find the inverse function of $f(x) = x^3 + 2$.
 
 **Solution**  
@@ -949,7 +950,7 @@ According to the inverse function process:
 
 3. Interchange $x$ and $y$ :   $y = \sqrt[3]{x - 2}$
 
-Therefore, the inverse function is:  
+Therefore, the inverse function is: 
 $$
 f^{-1}(x) = \sqrt[3]{x - 2}
 $$
@@ -1119,19 +1120,13 @@ If $x$ and $y$ are **positive numbers**, and $r$ is any **real number**, then:
 
 
 - **The inverse cosecant function:**
-  $$
-  y = \csc^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \csc(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]
-  $$
+  $$y = \csc^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \csc(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]$$
 
 - **The inverse secant function:**
-  $$
-  y = \sec^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \sec(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]
-  $$
+  $$y = \sec^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \sec(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]$$
 
 - **The inverse cotangent function:**
-  $$
-  y = \cot^{-1}(x) \quad (x \in \mathbb{R}) \quad \Leftrightarrow \quad \cot(y) = x, \quad y \in (0, \pi)
-  $$
+  $$y = \cot^{-1}(x) \quad (x \in \mathbb{R}) \quad \Leftrightarrow \quad \cot(y) = x, \quad y \in (0, \pi)$$
 ```tikz
 \begin{document}
 \begin{tikzpicture}[scale=0.85]
