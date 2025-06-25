@@ -90,7 +90,7 @@ $$
 $$
 
  -  **product formulas**
- $$
+$$
 \begin{aligned}
 \sin x \sin y &= \frac{1}{2}[\cos(x - y) - \cos(x + y)] \\
 \cos x \cos y &= \frac{1}{2}[\cos(x - y) + \cos(x + y)] \\
@@ -102,7 +102,9 @@ $$
 \cos x - \cos y &= -2 \sin\left(\frac{x + y}{2}\right) \sin\left(\frac{x - y}{2}\right)
 \end{aligned}
 $$
+
 *Hint:
+
 $$
 \sin x = \sin\left(\frac{x+y}{2} + \frac{x-y}{2}\right), \quad
 \sin y = \sin\left(\frac{x+y}{2} - \frac{x-y}{2}\right)
@@ -244,7 +246,9 @@ $$P(x) = a_nx^n + \cdots + a_1x + a_0$$
 **Example:**
 
 Let:  
-$$P(x) = 2x^3 - 3x^2 - 11x + 6$$
+$$
+P(x) = 2x^{3} - 3x^{2} - 11x + 6
+$$
 
 - Constant term: $a_0 = 6$  → factors: $\pm1, \pm2, \pm3, \pm6$
 - Leading coefficient: $a_n = 2$→ factors: $\pm1, \pm2$
@@ -254,16 +258,16 @@ $$P(x) = 2x^3 - 3x^2 - 11x + 6$$
 **Test roots:**
 Assume we find \( x = 2 \) is a root.  
 Then use **polynomial division** to factor:  
-\(P(x) = (x - 2)(2x^2 + x - 3)\)
+$$P(x) = (x - 2)(2x^2 + x - 3)$$
 
 
 #### *Descartes’ Rule of Signs — Explanation*
 **Descartes’ Rule of Signs** is a method to estimate the number of **positive** and **negative** real roots of a polynomial equation by examining the signs of its coefficients.
 
 Consider a polynomial:  
-\(
+$$
 P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
-\)
+$$
 
 ##### i. Positive Real Roots
 
@@ -285,18 +289,14 @@ or less by an even number.
 #### Example
 
 Let:  
-\(
-P(x) = x^3 - 4x^2 + 5x - 2
-\)
+$$P(x) = x^3 - 4x^2 + 5x - 2$$
 
 - Coefficients of  $P(x)$  are  $[+1, -4, +5, -2]$  
 	- Number of sign changes: 3  
 	- Possible positive roots: 3 or 1 (3 minus an even number)
 
 Compute  
-\(
-P(-x) = -x^3 - 4x^2 - 5x - 2
-\)
+$$P(-x) = -x^3 - 4x^2 - 5x - 2$$
 
 - Coefficients of  $P(-x)$  are  $[-1, -4, -5, -2]$  
 	- Number of sign changes: 0  
