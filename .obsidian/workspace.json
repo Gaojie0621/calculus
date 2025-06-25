@@ -11,14 +11,12 @@
             "id": "6d92d421898b6986",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "calculus/Algebra review.md",
-                "mode": "source",
-                "source": false
+                "file": "images/trigonometry_angle_figure1.png"
               },
-              "icon": "lucide-file",
-              "title": "Algebra review"
+              "icon": "lucide-image",
+              "title": "trigonometry_angle_figure1"
             }
           }
         ]
@@ -182,8 +180,13 @@
   },
   "active": "6d92d421898b6986",
   "lastOpenFiles": [
-    "images/trigonometry_angle_figure1.png",
     "calculus/Algebra review.md",
+    "obisdian_source/Algebra review.md",
+    "obisdian_source",
+    "calculus_pdf/Algebra review.pdf",
+    "calculus_pdf",
+    "新建文件夹",
+    "images/trigonometry_angle_figure1.png",
     "calculus",
     "images/elementary_functions_1.png",
     "images",
