@@ -95,12 +95,7 @@ $$
 \sin x \sin y &= \frac{1}{2}[\cos(x - y) - \cos(x + y)] \\
 \cos x \cos y &= \frac{1}{2}[\cos(x - y) + \cos(x + y)] \\
 \sin x \cos y &= \frac{1}{2}[\sin(x + y) + \sin(x - y)] \\
-\cos x \sin y &= \frac{1}{2}[\sin(x + y) - \sin(x - y)]
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
+\cos x \sin y &= \frac{1}{2}[\sin(x + y) - \sin(x - y)] \\
 \sin x + \sin y &= 2 \sin\left(\frac{x + y}{2}\right) \cos\left(\frac{x - y}{2}\right) \\
 \sin x - \sin y &= 2 \cos\left(\frac{x + y}{2}\right) \sin\left(\frac{x - y}{2}\right) \\
 \cos x + \cos y &= 2 \cos\left(\frac{x + y}{2}\right) \cos\left(\frac{x - y}{2}\right) \\
@@ -134,23 +129,19 @@ $$
 $$
 \sum_{i = m}^{n} (a_i - b_i) = \sum_{i = m}^{n} a_i - \sum_{i = m}^{n} b_i
 $$
-### Theorem: Common Summation Formulas
+#### Theorem: Common Summation Formulas
 Let  $c$  be a constant and $n$  a positive integer. Then:
+
 $$
-\sum_{i=1}^{n} 1 = n
-$$
-$$
-\sum_{i=1}^{n} c = nc
-$$
-$$
-\sum_{i=1}^{n} i = \frac{n(n + 1)}{2}
-$$
-$$
-\sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
-$$
-$$
+\begin{aligned}
+\sum_{i=1}^{n} 1 = n \\
+\sum_{i=1}^{n} c = nc \\
+\sum_{i=1}^{n} i = \frac{n(n + 1)}{2} \\
+\sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6} \\
 \sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2
+\end{aligned}
 $$
+
 #### *Proof by Mathematical Induction*
 
 We want to prove: $\sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2$
@@ -235,9 +226,7 @@ $$
 #### *Rational Root Theorem (Rational Zero Test)*
 
 Let the polynomial be:  
-$$
-P(x) = a_nx^n + \cdots + a_1x + a_0
-$$
+$$P(x) = a_nx^n + \cdots + a_1x + a_0$$
 
 > **Theorem:**
 > If a rational number $\frac{p}{q}$  (in lowest terms) is a root of the polynomial, then:
@@ -248,42 +237,33 @@ $$
 **Steps to Use the Rational Root Theorem:**
 
 1. **List all possible rational root candidates**:  
-   $$
-   \text{Candidates} = \pm \frac{\text{factors of } a_0}{\text{factors of } a_n}
-   $$
+   $$\text{Candidates} = \pm \frac{\text{factors of } a_0}{\text{factors of } a_n}$$
 
 2. **Test each candidate**
 
 **Example:**
 
 Let:  
-$$
-P(x) = 2x^3 - 3x^2 - 11x + 6
-$$
+$$P(x) = 2x^3 - 3x^2 - 11x + 6$$
 
 - Constant term: $a_0 = 6$  → factors: $\pm1, \pm2, \pm3, \pm6$
 - Leading coefficient: $a_n = 2$→ factors: $\pm1, \pm2$
 - Possible rational roots:  
-  $$
-  \pm1, \pm2, \pm3, \pm6, \pm\frac{1}{2}, \pm\frac{3}{2}
-  $$
+  $$\pm1, \pm2, \pm3, \pm6, \pm\frac{1}{2}, \pm\frac{3}{2}$$
 
 **Test roots:**
 Assume we find \( x = 2 \) is a root.  
 Then use **polynomial division** to factor:  
-$$
-P(x) = (x - 2)(2x^2 + x - 3)
-$$
+\(P(x) = (x - 2)(2x^2 + x - 3)\)
 
----
 
 #### *Descartes’ Rule of Signs — Explanation*
 **Descartes’ Rule of Signs** is a method to estimate the number of **positive** and **negative** real roots of a polynomial equation by examining the signs of its coefficients.
 
 Consider a polynomial:  
-$$
+\(
 P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
-$$
+\)
 
 ##### i. Positive Real Roots
 
@@ -305,18 +285,18 @@ or less by an even number.
 #### Example
 
 Let:  
-$$
+\(
 P(x) = x^3 - 4x^2 + 5x - 2
-$$
+\)
 
 - Coefficients of  $P(x)$  are  $[+1, -4, +5, -2]$  
 	- Number of sign changes: 3  
 	- Possible positive roots: 3 or 1 (3 minus an even number)
 
 Compute  
-$$
+\(
 P(-x) = -x^3 - 4x^2 - 5x - 2
-$$
+\)
 
 - Coefficients of  $P(-x)$  are  $[-1, -4, -5, -2]$  
 	- Number of sign changes: 0  
@@ -399,9 +379,9 @@ $$
 ![alt text](images/ellipses1.png)
 
  - **Vertical major axis:**
-$$
+\(
 \frac{x^2}{b^2} + \frac{y^2}{a^2} = 1 \quad (a > b)
-$$
+\)
 ![alt text](images/ellipses2.png)
 
  - **centered at (h, k):**    $\boxed{\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1}$
