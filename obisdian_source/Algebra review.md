@@ -468,14 +468,14 @@ The tangent line at x=0 has:
   - $\sqrt{x} = x^{1/2}$: Domain $[0, +\infty)$
  
  (i)  $a = n$, where $n$ is a positive integer:
- ![[images/elementary_functions_1.png]]
+ ![power functions](images/elementary_functions_1.png)
  (ii)  $a = \frac{1}{n}$, where $n$ is a positive integer:
  - The function $f(x) = x^{\frac{1}{n}} = \sqrt[n]{x}$ is a root function
-![[elementary_functions_2.png]]
+![power functions](images/elementary_functions_2.png)
+
 (iii) $a = -1$:
  - ***reciprocal function***: $f(x) = x^{-1} = \frac{1}{x}$
 
-![alt text](images/reciprocal.png)
 
 ### 5.2 Function Transformations
 For any function $y = f(x)$:
@@ -489,7 +489,7 @@ For any function $y = f(x)$:
 1. **Scaling**:
    - Vertical: $y = A f(x)$ (stretch if $|A| > 1$, shrink if $0 < |A| < 1$)
    - Horizontal: $y = f(Bx)$ (compressed if $|B| > 1$, stretched if $0 < |B| < 1$)
-![[images/functions_3.png]]
+![scaling](images/functions_3.png)
 1. **Reflection**:
    - $y = -f(x)$ (flip vertically)
    - $y = f(-x)$ (flip horizontally)
