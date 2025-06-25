@@ -113,7 +113,7 @@ $$
 \sin y = \sin\left(\frac{x+y}{2} - \frac{x-y}{2}\right)
 $$
 
-![[images/trigonometry_graph_2.png]]
+![Trigonometry Graph 2](images/trigonometry_graph_2.png)
 
 
 ## 2. Sigma Notations
@@ -136,22 +136,22 @@ $$
 $$
 ### Theorem: Common Summation Formulas
 Let  $c$  be a constant and $n$  a positive integer. Then:
-1. $$
+$$
 \sum_{i=1}^{n} 1 = n
 $$
-2. $$
+$$
 \sum_{i=1}^{n} c = nc
 $$
-3. $$
+$$
 \sum_{i=1}^{n} i = \frac{n(n + 1)}{2}
 $$
-4. $$
+$$
 \sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
 $$
-5. $$
+$$
 \sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2
 $$
-#### *5. Proof by Mathematical Induction*
+#### *Proof by Mathematical Induction*
 
 We want to prove: $\sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2$
 
@@ -224,9 +224,7 @@ $$
    - **Solving Methods**:  
      - Factoring (common factors, difference of squares, trinomial patterns)  
      - Quadratic Formula:  
-       $$
-       x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-       $$  
+       $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$ 
      - Completing the Square  
      - Polynomial Division (Long Division or Synthetic Division) 
      - Rational Root Theorem: test rational values $\pm \frac{p}{q}$  
@@ -1121,6 +1119,18 @@ If $x$ and $y$ are **positive numbers**, and $r$ is any **real number**, then:
 
 - **The inverse cotangent function:**
   $$y = \cot^{-1}(x) \quad (x \in \mathbb{R}) \quad \Leftrightarrow \quad \cot(y) = x, \quad y \in (0, \pi)$$
+
+![Inverse Trigonometric Functions](images/inverse_trig_functions.svg)
+### Key Connections to Calculus
+- **Derivatives**:
+  - $\frac{d}{dx} e^x = e^x$
+  - $\frac{d}{dx} \ln x = \frac{1}{x}$
+  - $\frac{d}{dx} \sin x = \cos x$
+- **Limits**:
+  - $\lim_{x \to -\infty} e^x = 0$
+  - $\lim_{x \to 0^+} \ln x = -\infty$
+
+
 ```tikz
 \begin{document}
 \begin{tikzpicture}[scale=0.85]
@@ -1217,14 +1227,751 @@ If $x$ and $y$ are **positive numbers**, and $r$ is any **real number**, then:
 \end{tikzpicture}
 \end{document}
 ```
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+  %%%%%%%%%%%%%%%%%%%%%% arcsin(x) %%%%%%%%%%%%%%%%%%%%%%
+  \begin{scope}[xshift=0cm]
+    % Axes
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.7) -- (0,1.7) node[above] {$y$};
+    \draw[dashed] (-1,-1.7) -- (-1,1.7);
+    \draw[dashed] (1,-1.7) -- (1,1.7);
+    
+    % arcsin(x)
+    \draw[blue, thick, smooth] plot coordinates {
+      (-1,-1.57) (-0.8,-0.93) (-0.5,-0.52) (0,0) 
+      (0.5,0.52) (0.8,0.93) (1,1.57)
+    };
+    
+    % Labels
+    \node[blue] at (0.6,1.2) {$\arcsin x$};
+    \node at (1,-0.2) {$1$};
+    \node at (-1,-0.2) {$-1$};
+    \node at (0.2,1.57) {$\frac{\pi}{2}$};
+    \node at (0.2,-1.57) {$-\frac{\pi}{2}$};
+    \node at (0,-2.1) {(a) $y = \sin^{-1}x = \arcsin x$};
+  \end{scope}
 
-### Key Connections to Calculus
-- **Derivatives**:
-  - $\frac{d}{dx} e^x = e^x$
-  - $\frac{d}{dx} \ln x = \frac{1}{x}$
-  - $\frac{d}{dx} \sin x = \cos x$
-- **Limits**:
-  - $\lim_{x \to -\infty} e^x = 0$
-  - $\lim_{x \to 0^+} \ln x = -\infty$
+  %%%%%%%%%%%%%%%%%%%%%% arccos(x) %%%%%%%%%%%%%%%%%%%%%%
+  \begin{scope}[xshift=4cm]
+    % Axes
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-0.5) -- (0,3.5) node[above] {$y$};
+    \draw[dashed] (-1,-0.5) -- (-1,3.5);
+    \draw[dashed] (1,-0.5) -- (1,3.5);
+    
+    % arccos(x)
+    \draw[red, thick, smooth] plot coordinates {
+      (-1,3.14) (-0.8,2.5) (-0.5,2.09) (0,1.57)
+      (0.5,1.05) (0.8,0.64) (1,0)
+    };
+    
+    % Labels
+    \node[red] at (-0.6,2.8) {$\arccos x$};
+    \node at (1,-0.2) {$1$};
+    \node at (-1,-0.2) {$-1$};
+    \node at (0.2,3.14) {$\pi$};
+    \node at (0.2,1.57) {$\frac{\pi}{2}$};
+    \node at (0,-0.8) {(b) $y = \cos^{-1}x =\arccos x$};
+  \end{scope}
+
+  %%%%%%%%%%%%%%%%%%%%%% arctan(x) %%%%%%%%%%%%%%%%%%%%%%
+  \begin{scope}[xshift=9cm]
+    % Axes
+    \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+    \draw[->] (0,-1.7) -- (0,1.7) node[above] {$y$};
+    
+    % arctan(x)
+    \draw[green!60!black, thick, smooth] plot coordinates {
+      (-2.5,-1.19) (-2,-1.11) (-1,-0.79) (0,0)
+      (1,0.79) (2,1.11) (2.5,1.19)
+    };
+    
+    % Asymptotes
+    \draw[dashed] (-2.5,1.57) -- (2.5,1.57);
+    \draw[dashed] (-2.5,-1.57) -- (2.5,-1.57);
+    
+    % Labels
+    \node[green!60!black] at (1.8,0.8) {$\arctan x$};
+    \node at (0.2,1.57) {$\frac{\pi}{2}$};
+    \node at (0.2,-1.57) {$-\frac{\pi}{2}$};
+    \node at (0,-2.1) {(c) $y = \tan^{-1}x =\arctan x$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
 
 
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0]
+
+  
+
+  % Axes
+
+  \draw[->] (-3,0) -- (4,0) node[right] {$x$};
+
+  \draw[->] (0,-3) -- (0,4) node[above] {$y$};
+
+  \draw[dashed] (-3,-3) -- (4,4) node[right] {$y=x$};
+
+  
+
+  % Grid (light)
+
+  \foreach \i in {-2,-1,1,2,3} {
+
+    \draw[gray!20] (\i,-3) -- (\i,4);
+
+    \draw[gray!20] (-3,\i) -- (4,\i);
+
+  }
+
+  
+
+  % y = e^x (approximated points)
+
+  \draw[blue, thick, smooth] plot coordinates {
+
+    (-2.5,0.08) (-2,0.14) (-1.5,0.22) (-1,0.37) (-0.5,0.61)
+
+    (0,1) (0.5,1.65) (1,2.72) (1.5,4.48)
+
+  };
+
+  \node[blue, right] at (1,3) {$y = e^x$};
+
+  
+
+  % y = ln(x) (approximated points)
+
+  \draw[red, thick, smooth] plot coordinates {
+
+    (0.05,-3) (0.1,-2.3) (0.22,-1.5) (0.37,-1) (0.61,-0.5)
+
+    (1,0) (1.65,0.5) (2.72,1) (4.48,1.5)
+
+  };
+
+  \node[red, above] at (2.5,1) {$y = \ln x$};
+
+  
+
+  % Key points
+
+  \fill (0,1) circle (2pt) node[left] {$(0,1)$};
+
+  \fill (1,0) circle (2pt) node[below right] {$(1,0)$};
+
+  \fill (1,2.72) circle (1.5pt);
+
+  \fill (2.72,1) circle (1.5pt);
+
+  
+
+  % Reflection note
+
+  \node[gray] at (2,-2) {Reflections across $y=x$};
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+  
+
+% Failed horizontal line test example (not one-to-one)
+
+\begin{scope}[shift={(0,0)}]
+
+  % Axes
+
+  \draw[->] (-2,0) -- (4,0) node[right] {$x$};
+
+  \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+
+  % Function curve (parabola)
+
+  \draw[blue, thick, domain=-1.5:3, smooth] plot (\x, {0.5*(\x-1)^2});
+
+  \node[blue, right] at (3,2) {$y = f(x)$};
+
+  % Horizontal line intersecting twice
+
+  \draw[red, thick, dashed] (-1,1.25) -- (3,1.25)
+
+    node[midway, above] {Fails test};
+
+  % Intersection points
+
+  \filldraw (0.29,1.25) circle (1.5pt);
+
+  \filldraw (1.71,1.25) circle (1.5pt);
+
+  \node at (1,-1) {Not one-to-one (fails horizontal line test)};
+
+\end{scope}
+
+  
+
+% Passed horizontal line test example (one-to-one)
+
+\begin{scope}[shift={(7,0)}]
+
+  % Axes
+
+  \draw[->] (-2,0) -- (4,0) node[right] {$x$};
+
+  \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+
+  % Function curve (exponential)
+
+  \draw[blue, thick, domain=-1.5:1.5, smooth] plot (\x, {exp(\x)});
+
+  \node[blue, right] at (1.5,4) {$y = g(x)$};
+
+  % Horizontal line intersecting once
+
+  \draw[green!70!black, thick, dashed] (-1,1.5) -- (3,1.5)
+
+    node[midway, above] {Passes test};
+
+  % Single intersection point
+
+  \filldraw (0.405,1.5) circle (1.5pt);
+
+  \node at (1,-1) {One-to-one (passes test)};
+
+\end{scope}
+
+  
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5, >=stealth]
+
+  % Axes
+
+  \draw[->] (-2.5,0) -- (4.5,0) node[right] {$x$};
+
+  \draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
+
+  % Grid
+
+  \draw[gray!30, dashed] (-2.5,-0.5) grid (4.5,3);
+
+  % Ticks
+
+  \foreach \x in {-2,-1,0,1,2,3,4}
+
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+
+  \foreach \y in {0,1,2,3}
+
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+
+  % Original function
+
+  \draw[black, thick, domain=0:4, samples=100] plot (\x, {sqrt(\x)});
+
+  \node[black, right] at (4,2) {$y = \sqrt{x}$};
+
+  % Shifted functions (corrected plotting method)
+
+  \draw[blue, thick, domain=0:4, samples=100] plot ({\x+2}, {sqrt(\x)});
+
+  \node[blue, right] at (4,1.5) {$y = \sqrt{x-2}$};
+
+  \draw[red, thick, domain=0:4, samples=100] plot ({\x-1}, {sqrt(\x)});
+
+  \node[red, right] at (3,2.5) {$y = \sqrt{x+1}$};
+
+  % Shift arrows
+
+  \draw[blue, ->, dashed] (1,1) -- (3,1) node[midway, above] {Right +2};
+
+  \draw[red, ->, dashed] (1,1) -- (0,1) node[midway, above] {Left -1};
+
+  % Origin
+
+  \fill (0,0) circle (1pt) node[below left] {O};
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5, >=stealth]
+
+  % Axes
+
+  \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+
+  \draw[->] (0,-1.5) -- (0,4.5) node[above] {$y$};
+
+  % Grid (optional)
+
+  \draw[gray!30, dashed] (-2.5,-1.5) grid (2.5,4.5);
+
+  % Ticks
+
+  \foreach \x in {-2,-1,1,2}
+
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+
+  \foreach \y in {-1,0,1,2,3,4}
+
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+
+  % Original function: y = x^2 (black)
+
+  \draw[black, thick, domain=-1.7:1.7, smooth] plot (\x, {\x*\x})
+
+    node[right] {$y = x^2$};
+
+  % Shifted functions
+
+  \draw[blue, thick, domain=-1.7:1.7, smooth] plot (\x, {\x*\x + 2})
+
+    node[right] {$y = x^2 + 2$}; % Shift up by 2
+
+  \draw[red, thick, domain=-1.7:1.7, smooth] plot (\x, {\x*\x - 1})
+
+    node[right] {$y = x^2 - 1$}; % Shift down by 1
+
+  % Highlight shifts with arrows
+
+  \draw[blue, ->, dashed] (1.2,1.44) -- (1.2,3.44) node[midway, right] {+2 units};
+
+  \draw[red, ->, dashed] (-1.2,1.44) -- (-1.2,0.44) node[midway, left] {-1 unit};
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0, >=stealth]
+
+  % Axes
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+  % Grid (optional)
+
+  \draw[gray!30, dashed] (-3,-3) grid (3,3);
+
+  % Ticks
+
+  \foreach \x in {-3,-2,-1,1,2,3}
+
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+
+  \foreach \y in {-3,-2,-1,1,2,3}
+
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+
+  % Reciprocal function (with asymptotes)
+
+  \draw[blue, thick, domain=-3:-0.3, smooth] plot (\x, {1/\x}); % Left branch
+
+  \draw[blue, thick, domain=0.3:3, smooth] plot (\x, {1/\x});  % Right branch
+
+  \node[blue, right] at (1.5,0.7) {$y = \frac{1}{x}$};
+
+  % Asymptotes
+
+  \draw[dashed, red] (-3,0) -- (3,0) node[above left] {$y=0$}; % Horizontal
+
+  \draw[dashed, red] (0,-3) -- (0,3) node[below right] {$x=0$}; % Vertical
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2, >=stealth]
+
+  % Axes
+
+  \draw[->] (0,0) -- (5,0) node[right] {$x$};
+
+  \draw[->] (0,-1) -- (0,2.5) node[above] {$y$};
+
+  % Grid
+
+  \draw[gray!30, dashed] (0,-1) grid (5,2.5);
+
+  % Ticks
+
+  \foreach \x in {0,1,2,3,4,5}
+
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+
+  \foreach \y in {-1,0,1,2}
+
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {\y};
+
+  % Logarithmic functions
+
+  \draw[blue, thick, domain=0.09:5, smooth] plot (\x, {ln(\x)/ln(2)});
+
+  \node[blue, right] at (4, {ln(4)/ln(2)}) {$y = \log_2 x$};
+
+  \draw[red, thick, domain=0.04:5, smooth] plot (\x, {ln(\x)/ln(3)});
+
+  \node[red, right] at (4, {ln(4)/ln(3)}) {$y = \log_3 x$};
+
+  \draw[green!70!black, thick, domain=0.02:5, smooth] plot (\x, {ln(\x)/ln(5)});
+
+  \node[green!70!black, right] at (4, {ln(4)/ln(5)}) {$y = \log_5 x$};
+
+  \draw[orange, thick, domain=0.02:5, smooth] plot (\x, {ln(\x)/ln(10)});
+
+  \node[orange, right] at (4, {ln(4)/ln(10)}) {$y = \log_{10} x$};
+
+  % Intersection point
+
+  \fill (1,0) circle (2pt);
+
+  \node[below right] at (1,0) {1};
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0]
+
+  % 坐标系（扩大y轴范围）
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+
+  % 四组抛物线（智能标签定位）
+
+  \foreach \a/\color/\pos in {
+
+    1.5/red/0.8,
+
+    3.0/blue/0.6,
+
+    -1.5/orange/-0.8,
+
+    -3.0/purple/-0.6
+
+  }{
+
+    \draw[\color, thick, domain=-{sqrt(5/abs(\a))}:{sqrt(5/abs(\a))}]
+
+      plot (\x, \a*\x*\x);
+
+    \node[\color, anchor=west] at (1.2, \a*1.44) {$y = \a x^2$};
+
+  }
+
+  
+
+  % 顶点标记
+
+  \foreach \a/\color in {1.5/red, 3.0/blue, -1.5/orange, -3.0/purple}
+
+    \fill[\color] (0,0) circle (1.5pt);
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0]
+
+  % 坐标系（扩大y轴范围）
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+
+  % 四组抛物线（智能标签定位）
+
+  \foreach \a/\color/\pos in {
+
+    1.5/red/0.8,
+
+    3.0/blue/0.6,
+
+    -1.5/orange/-0.8,
+
+    -3.0/purple/-0.6
+
+  }{
+
+    \draw[\color, thick, domain=-{sqrt(5/abs(\a))}:{sqrt(5/abs(\a))}]
+
+      plot (\a*\x*\x, \x);
+
+    \node[\color, anchor=west] at (\a*\pos*\pos, \pos) {$x = \a y^2$};
+
+  }
+
+  
+
+  % 顶点标记
+
+  \foreach \a/\color in {1.5/red, 3.0/blue, -1.5/orange, -3.0/purple}
+
+    \fill[\color] (0,0) circle (1.5pt);
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+\usetikzlibrary{decorations.pathreplacing}
+
+  % 坐标系
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-2) -- (0,2) node[above] {$y$};
+
+  % 椭圆参数 (a > b)
+
+  \def\a{2}    % 水平轴半径
+
+  \def\b{1}    % 垂直轴半径
+
+  \def\h{0}    % 中心x
+
+  \def\k{0}    % 中心y
+
+  
+
+  % 绘制椭圆
+
+  \draw[red, thick] (\h,\k) ellipse (\a cm and \b cm);
+
+  % 标注主轴
+
+  \draw[decorate, decoration={brace, amplitude=5pt, mirror}] (\h,\k) -- (\h+\a,\k) node[midway,below] {$a$};
+
+  \draw[decorate, decoration={brace, amplitude=5pt}] (\h,\k) -- (\h,\k+\b) node[midway,left] {$b$};
+
+  % 中心点
+
+  \fill (\h,\k) circle (2pt) node[below left] {$(0,0)$};
+
+  % 公式标注
+
+  \node[anchor=north west] at (-2.8,1.8) {
+
+    $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ \\
+
+    $(a > b)$
+
+  };
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+  % 坐标系
+
+  \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+
+  \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+  % 椭圆参数 (b > a)
+
+  \def\a{0.8}  % 水平轴半径
+
+  \def\b{2}    % 垂直轴半径
+
+  \def\h{0}    % 中心x
+
+  \def\k{0}    % 中心y
+
+  
+
+  % 绘制椭圆
+
+  \draw[blue, thick] (\h,\k) ellipse (\a cm and \b cm);
+
+  % 标注主轴
+
+  \draw[dashed] (\h,\k) -- (\h+\a,\k) node[midway,below] {$a$};
+
+  \draw[dashed] (\h,\k) -- (\h,\k+\b) node[midway,left] {$b$};
+
+  % 公式标注
+
+  \node[anchor=north west] at (-1.8,2.8) {
+
+    $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ \\
+
+    $ (b > a)$
+
+  };
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5, >=stealth]
+
+  % Axes
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-0.5) -- (0,4) node[above] {$y$};
+
+  % Grid (optional)
+
+  \draw[gray!30, dashed] (-3,-0.5) grid (3,4);
+
+  % Ticks
+
+  \foreach \x in {-3,-2,-1,0,1,2,3}
+
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+
+  \foreach \y in {0,1,2,3,4}
+
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {\y};
+
+  % Exponential functions
+
+  \draw[blue, thick, domain=-3:1.5, smooth] plot (\x, {2^\x}) node[right] {$y = 2^x$}; % Growing exponential (a=2)
+
+  \draw[red, thick, domain=-1.5:3, smooth] plot (\x, {0.5^\x}) node[right] {$y = 0.5^x$}; % Decaying exponential (a=0.5)
+
+  % Highlight asymptote and intersection
+
+  \draw[dashed] (-3,0) -- (3,0); % Asymptote at y=0
+
+  \fill (0,1) circle (2pt) node[above left] {$(0,1)$}; % All exponentials pass through (0,1)
+
+\end{tikzpicture}
+
+\end{document}
+
+```
+```tikz
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0]
+
+  % Axes
+
+  \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+  \draw[->] (0,-0.5) -- (0,5) node[above] {$y$};
+
+  % Grid lines
+
+  \foreach \x in {-2,-1,1,2} \draw[gray!20] (\x,-0.5) -- (\x,5);
+
+  \foreach \y in {1,2,3,4} \draw[gray!20] (-3,\y) -- (3,\y);
+
+  % Exponential curve (approximated)
+
+  \draw[blue, thick, smooth] plot coordinates {
+
+    (-2.5,0.08) (-2,0.13) (-1.5,0.22) (-1,0.37)
+
+    (-0.5,0.61) (0,1) (0.5,1.65) (1,2.72)
+
+    (1.5,4.48)
+
+  };
+
+  \node[blue, right] at (1,3) {$y = e^x$};
+
+  % Tangent line at (0,1): y = x + 1
+
+  \draw[red, thick] (-2,-1) -- (2,3);
+
+  \node[red, right] at (1,1.5) {Tangent: $y = x+1$};
+
+  % Key point
+
+  \fill (0,1) circle (2pt) node[below right] {$(0,1)$};
+
+  % Asymptote
+
+  \draw[orange, dashed] (-3,0) -- (3,0) node[right] {$y=0$};
+
+\end{tikzpicture}
+
+\end{document}
+
+```
