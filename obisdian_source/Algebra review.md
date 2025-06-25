@@ -481,10 +481,9 @@ the same value twice; that is:
 $$
 f(x_{1}) \neq f(x_{2}) \quad whenever x_{1} \neq x_{2}
 $$
-***Horizontal Line Test***  A function is one-to-one if and only if no horizontal line
-intersects its graph more than once.
+***Horizontal Line Test***  A function is one-to-one if and only if no horizontal line intersects its graph more than once.
 
-![hprizontal_line_test](images\horizontal_line_test.png)
+![horizontal_line_test](images\horizontal_line_test.png)
 
 **Definition 2** 
 Let $f$ be a one-to-one function with domain $A$ and range $B$.  
@@ -506,16 +505,12 @@ for any $y \in B$.
 ##### How to Find the Inverse Function of a One-to-One Function $f$
 
 **Step 1**: Write the equation 
-$$
-y = f(x)
-$$
+\(y = f(x)\)
 
 **Step 2**: Solve this equation for $x$ in terms of $y$ (if possible): $\boxed{f(y) = x}$
 
 **Step 3**: Interchange $x$ and $y$ to express $f^{-1}$ as a function of $x$: 
-$$
-y = f^{-1}(x)
-$$
+$$y = f^{-1}(x)$$
 **Example** 
 Find the inverse function of $f(x) = x^3 + 2$.
 
@@ -529,9 +524,7 @@ According to the inverse function process:
 3. Interchange $x$ and $y$ :   $y = \sqrt[3]{x - 2}$
 
 Therefore, the inverse function is: 
-$$
-f^{-1}(x) = \sqrt[3]{x - 2}
-$$
+$$f^{-1}(x) = \sqrt[3]{x - 2}$$
 
 #### Definition of Logarithm and its Inverse Relationship
 
