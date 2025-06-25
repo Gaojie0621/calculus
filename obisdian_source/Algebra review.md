@@ -90,12 +90,18 @@ $$
 $$
 
  -  **product formulas**
+
 $$
 \begin{aligned}
 \sin x \sin y &= \frac{1}{2}[\cos(x - y) - \cos(x + y)] \\
 \cos x \cos y &= \frac{1}{2}[\cos(x - y) + \cos(x + y)] \\
 \sin x \cos y &= \frac{1}{2}[\sin(x + y) + \sin(x - y)] \\
 \cos x \sin y &= \frac{1}{2}[\sin(x + y) - \sin(x - y)] \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
 \sin x + \sin y &= 2 \sin\left(\frac{x + y}{2}\right) \cos\left(\frac{x - y}{2}\right) \\
 \sin x - \sin y &= 2 \cos\left(\frac{x + y}{2}\right) \sin\left(\frac{x - y}{2}\right) \\
 \cos x + \cos y &= 2 \cos\left(\frac{x + y}{2}\right) \cos\left(\frac{x - y}{2}\right) \\
@@ -245,7 +251,8 @@ $$P(x) = a_nx^n + \cdots + a_1x + a_0$$
 
 **Example:**
 
-Let:  
+Let:
+
 $$
 P(x) = 2x^{3} - 3x^{2} - 11x + 6
 $$
@@ -264,7 +271,8 @@ $$P(x) = (x - 2)(2x^2 + x - 3)$$
 #### *Descartes’ Rule of Signs — Explanation*
 **Descartes’ Rule of Signs** is a method to estimate the number of **positive** and **negative** real roots of a polynomial equation by examining the signs of its coefficients.
 
-Consider a polynomial:  
+Consider a polynomial:
+
 $$
 P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 $$
@@ -379,9 +387,11 @@ $$
 ![alt text](images/ellipses1.png)
 
  - **Vertical major axis:**
-\(
+
+$$
 \frac{x^2}{b^2} + \frac{y^2}{a^2} = 1 \quad (a > b)
-\)
+$$
+
 ![alt text](images/ellipses2.png)
 
  - **centered at (h, k):**    $\boxed{\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1}$
@@ -478,12 +488,16 @@ For any function $y = f(x)$:
 **Definition 1** 
 A function f is called a ***one-to-one function*** if it never takes on
 the same value twice; that is:
-$$
-f(x_{1}) \neq f(x_{2}) \quad whenever x_{1} \neq x_{2}
-$$
-***Horizontal Line Test***  A function is one-to-one if and only if no horizontal line intersects its graph more than once.
 
-![horizontal_line_test](images\horizontal_line_test.png)
+$$
+f(x_{1}) = f(x_{2}) \quad whenever \quad x_{1} = x_{2}
+$$
+
+
+***Horizontal Line Test***  
+A function is one-to-one if and only if no horizontal line intersects its graph more than once.
+
+![alt text](images/horizontal_line_test.png)
 
 **Definition 2** 
 Let $f$ be a one-to-one function with domain $A$ and range $B$.  
