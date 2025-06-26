@@ -49,9 +49,9 @@ $$
 \nexists \lim_{x \to 0} \sin\left(\frac{1}{x}\right)
 $$
 
-#### Graph of \( f(x) = \sin\left(\frac{1}{x}\right) \) near \( x = 0 \)
+#### Graph of $f(x) = \sin\left(\frac{1}{x}\right)$ near $x = 0$
 
-This function oscillates infinitely fast as \( x \to 0 \), so the limit does **not exist**.
+This function oscillates infinitely fast as $x \to 0$ , so the limit does **not exist**.
 
 ![Graph of f(x) = sin(1/x)](images/sin_1_over_x_graph.png)
 
@@ -59,9 +59,11 @@ This function oscillates infinitely fast as \( x \to 0 \), so the limit does **n
 
 #### i. Left-Hand Limit
 We write
+
 $$
 \lim_{x \to a^-} f(x) = L
 $$
+
 and say:
 - *"The left-hand limit of f(x) as x approaches a"*  
   or  
@@ -72,9 +74,11 @@ This means we can make the values of f(x) arbitrarily close to L by taking x suf
 
 #### ii. Right-Hand Limit
 Similarly, for the right-hand limit we write:
+
 $$
 \lim_{x \to a^+} f(x) = L
 $$
+
 and say:
 - *"The right-hand limit of f(x) as x approaches a"*  
   or  
@@ -113,9 +117,11 @@ $$
 
 ### 1.3 infinite Limits
 We write
+
 $$
 \lim_{x \to a} f(x) = \infty
 $$
+
 and say:
 - *"The limit of f(x) as x approaches a is infinity"*
 
@@ -242,7 +248,7 @@ Let $f(x) = \frac{x^2 - 1}{x - 1}$. We cannot:
 Factor the numerator (difference of squares):
 
 $$
-\frac{x^2 - 1}{x - 1} = \frac{(x - 1)(x + 1)}{x - 1}\\={x+1}
+\frac{x^2 - 1}{x - 1} = \frac{(x - 1)(x + 1)}{x - 1} ={x+1}
 $$
 
  - **Step 3: Compute the Limit**
@@ -262,6 +268,7 @@ $$
 **Solution**
 
 Multiply numerator and denominator by the conjugate:
+
 $$
 \lim_{t \to 0} \frac{\sqrt{t^2 + 9} - 3}{t^2} \cdot \frac{\sqrt{t^2 + 9} + 3}{\sqrt{t^2 + 9} + 3}
 $$
@@ -408,44 +415,32 @@ $$
 $$
 
 **Step-by-step derivation:**
-1. Simplify the expression:
+1. Simplify the expression: $|(4x - 5) - 7| = |4x - 12| = 4|x - 3|$
 
-   $$
-   |(4x - 5) - 7| = |4x - 12| = 4|x - 3|
-   $$
+2. We want: $4|x - 3| < \epsilon \implies |x - 3| < \frac{\epsilon}{4}$
 
-2. We want:
-
-   $$
-   4|x - 3| < \epsilon \implies |x - 3| < \frac{\epsilon}{4}
-   $$
-
-3. This suggests choosing:
-
-   $$
-   \delta = \frac{\epsilon}{4}
-   $$
+3. This suggests choosing: $\delta = \frac{\epsilon}{4}$
 
 **Part 2: Formal Proof**
 
 **Given** any $\epsilon > 0$, **choose** $\boxed{\delta = \frac{\epsilon}{4}}$. **Then** for all $x$ satisfying $0 < |x - 3| < \delta$:
 1. Start with the distance to $x=3$:
 
-   $$
-   |x - 3| < \delta = \frac{\epsilon}{4}
-   $$
+$$
+|x - 3| < \delta = \frac{\epsilon}{4}
+$$
 
 2. Multiply both sides by 4:
 
-   $$
-   4|x - 3| < \epsilon
-   $$
+$$
+4|x - 3| < \epsilon
+$$
 
 3. Which is equivalent to:
 
-   $$
-   |(4x - 5) - 7| < \epsilon
-   $$
+$$
+|(4x - 5) - 7| < \epsilon
+$$
 
 **Conclusion:**
 By the ε-δ definition of a limit, we have proved:
