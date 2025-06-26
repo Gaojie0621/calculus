@@ -345,6 +345,7 @@ $$
 $$
 
 Multiply by $x^2$ (which is always non-negative):
+
 $$
 -x^2 \leq x^2 \sin\left(\frac{1}{x}\right) \leq x^2
 $$
