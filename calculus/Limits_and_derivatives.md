@@ -557,6 +557,7 @@ $$ f(x) = \begin{cases}
 
 **Solution:**  
 Here $f(2) = 1$ is defined, and  
+
 $$ \lim_{x \to 2} f(x) = \lim_{x \to 2} \frac{x^2 - x - 2}{x - 2} = \lim_{x \to 2} \frac{(x - 2)(x + 1)}{x - 2} = \lim_{x \to 2} (x + 1) = 3 $$  
 exists. However,  
 
@@ -567,7 +568,9 @@ so $f$ is not continuous at $x = 2$.
 ---
 
 **(d)** 
+
 $$ f(x) = \lfloor x \rfloor $$  
+
 (the greatest integer function)
 
 **Solution:**  
@@ -601,6 +604,7 @@ $$
 
 **Solution** If $-1 < a < 1$, then using the Limit Laws, we have:
 $$
+
 \begin{align*}
 \lim_{x \to a} f(x) &= \lim_{x \to a} \left(1 - \sqrt{1 - x^2}\right) \\
 &= 1 - \lim_{x \to a} \sqrt{1 - x^2} \quad \\
@@ -611,12 +615,14 @@ $$
 $$
 
 Thus, by Definition 1, $f$ is continuous at $a$ if $-1 < a < 1$. Similar calculations show that:
+
 $$
 \lim_{x \to -1^+} f(x) = 1 = f(-1) \quad \text{and} \quad \lim_{x \to 1^-} f(x) = 1 = f(1)
 $$
+
 so $f$ is continuous from the right at $-1$ and continuous from the left at $1$. Therefore, according to Definition 3, $f$ is continuous on $[-1, 1]$.
 
-***The graph of $f$ is the lower half of the circle***  $x^2 + (y - 1)^2 = 1$.
+***The graph of*** ${f}$ ***is the lower half of the circle***  $x^2 + (y - 1)^2 = 1$.
 
 <img src="images/semicircle_function.png" alt="semicircle" width="500" height="400">
 
@@ -857,46 +863,46 @@ $$
 1. **As $x \to \infty$**:
    Dividing numerator and denominator by $x$:
 
-   $$
-   \lim_{x\to\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to\infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x - 5}{x}} = \lim_{x\to\infty} \frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}}
-   $$
+$$
+\lim_{x\to\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to\infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x - 5}{x}} = \lim_{x\to\infty} \frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}}
+$$
 
    Since $\sqrt{x^2} = x$ for $x > 0$:
 
-   $$
-   = \frac{\sqrt{\lim_{x\to\infty}2 + \lim_{x\to\infty}\frac{1}{x^2}}}{\lim_{x\to\infty}3 - 5\lim_{x\to\infty}\frac{1}{x}} = \frac{\sqrt{2 + 0}}{3 - 0} = \frac{\sqrt{2}}{3}
-   $$
+$$
+= \frac{\sqrt{\lim_{x\to\infty}2 + \lim_{x\to\infty}\frac{1}{x^2}}}{\lim_{x\to\infty}3 - 5\lim_{x\to\infty}\frac{1}{x}} = \frac{\sqrt{2 + 0}}{3 - 0} = \frac{\sqrt{2}}{3}
+$$
 
    Thus, $y = \frac{\sqrt{2}}{3}$ is a horizontal asymptote.
 
 2. **As $x \to -\infty$**:
    For $x < 0$, $\sqrt{x^2} = |x| = -x$:
 
-   $$
-   \lim_{x\to-\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to-\infty} \frac{-\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} = \frac{-\sqrt{2}}{3}
-   $$
+$$
+\lim_{x\to-\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to-\infty} \frac{-\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} = \frac{-\sqrt{2}}{3}
+$$
 
    Thus, $y = -\frac{\sqrt{2}}{3}$ is another horizontal asymptote.
 
 **Vertical Asymptote:**
 - Occurs where denominator equals zero:
 
-  $$
-  3x - 5 = 0 \implies x = \frac{5}{3}
-  $$
+$$
+3x - 5 = 0 \implies x = \frac{5}{3}
+$$
 
 - Behavior near $x = \frac{5}{3}$:
   - **Right-hand limit** ($x \to \frac{5}{3}^+$):
 
-    $$
-    \lim_{x\to(\frac{5}{3})^+} f(x) = +\infty
-    $$
+$$
+\lim_{x\to(\frac{5}{3})^+} f(x) = +\infty
+$$
 
   - **Left-hand limit** ($x \to \frac{5}{3}^-$):
 
-    $$
-    \lim_{x\to(\frac{5}{3})^-} f(x) = -\infty
-    $$
+$$
+\lim_{x\to(\frac{5}{3})^-} f(x) = -\infty
+$$
 
 **Conclusion**:
 - **Horizontal asymptotes**: $y = \frac{\sqrt{2}}{3}$ and $y = -\frac{\sqrt{2}}{3}$
@@ -905,22 +911,26 @@ $$
 <img src="images/function_with_asymptotes.png" alt="HA2" width = 600 height = 400>
 
 **Example 2**: Evaluate 
+
 $$
 \lim_{x \to 0^-} e^{1/x}
 $$
 
 **Solution**:  
 Let $t = \frac{1}{x}$. As $x \to 0^-$, we have:
+
 $$
 t \to -\infty
 $$
 
 Using the known limit property:
+
 $$
 \lim_{t \to -\infty} e^t = 0
 $$
 
 Therefore:
+
 $$
 \lim_{x \to 0^-} e^{1/x} = \lim_{t \to -\infty} e^t = \boxed{0}
 $$
@@ -1077,13 +1087,13 @@ $$
 
 **Proof Outline:**
 1. Differentiability requires:
-   $$ \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a) \text{ exists} $$
+   $\lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a) \text{ exists} $
 2. Rewrite the difference quotient:
-   $$ f(a+h)-f(a) = h \cdot \frac{f(a+h)-f(a)}{h} $$
+   $ f(a+h)-f(a) = h \cdot \frac{f(a+h)-f(a)}{h} $
 3. Take limits as $h \to 0$:
-   $$ \lim_{h \to 0} [f(a+h)-f(a)] = 0 \cdot f'(a) = 0 $$
+   $\lim_{h \to 0} [f(a+h)-f(a)] = 0 \cdot f'(a) = 0 $
 4. Thus:
-   $$ \lim_{h \to 0} f(a+h) = f(a) $$
+   $\lim_{h \to 0} f(a+h) = f(a) $
    which is exactly the definition of continuity.
 
 #### Important Notes:
