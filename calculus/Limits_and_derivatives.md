@@ -504,3 +504,588 @@ $$
 
 <img src="images/infinite_limits_precise.png" alt="Limit Formal Statement" width="800" height="400">
 
+## 3. Continuity
+### 3.1 Definition of Continuity
+#### **Definition 1**
+A function $f$ is continuous at $a$ if:
+
+$$
+\lim_{x \to a} f(x) = f(a)
+$$
+
+Notice that ***Definition 1*** implicitly requires three things if $f$ is continuous at $a$:
+
+1. $f(a)$ is defined (that is, $a$ is in the domain of $f$)
+2. $\lim_{x \to a} f(x)$ exists
+3. $\lim_{x \to a} f(x) = f(a)$
+
+<img src="images/continuity_1.png" alt="continuity" width="350" height="250">
+
+##### Example: Where are each of the following functions discontinuous?
+
+**(a)** 
+
+$$ f(x) = \frac{x^2 - x - 2}{x - 2} $$
+
+**Solution:**  
+Notice that $f(2)$ is not defined, so $f$ is discontinuous at $x = 2$. Later we'll see why $f$ is continuous at all other numbers.
+
+---
+
+**(b)** 
+
+$$ f(x) = \begin{cases} 
+\frac{1}{x^2} & \text{if } x \neq 0, \\
+1 & \text{if } x = 0 
+\end{cases} $$
+
+**Solution:**  
+Here $f(0) = 1$ is defined, but  
+
+$$ \lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{1}{x^2} $$
+
+does not exist (it tends to $+\infty$). Thus, $f$ is discontinuous at $x = 0$.
+
+---
+
+**(c)** 
+
+$$ f(x) = \begin{cases} 
+\frac{x^2 - x - 2}{x - 2} & \text{if } x \neq 2, \\
+1 & \text{if } x = 2 
+\end{cases} $$
+
+**Solution:**  
+Here $f(2) = 1$ is defined, and  
+$$ \lim_{x \to 2} f(x) = \lim_{x \to 2} \frac{x^2 - x - 2}{x - 2} = \lim_{x \to 2} \frac{(x - 2)(x + 1)}{x - 2} = \lim_{x \to 2} (x + 1) = 3 $$  
+exists. However,  
+
+$$ \lim_{x \to 2} f(x) \neq f(2) $$  
+
+so $f$ is not continuous at $x = 2$.
+
+---
+
+**(d)** 
+$$ f(x) = \lfloor x \rfloor $$  
+(the greatest integer function)
+
+**Solution:**  
+The greatest integer function $f(x) = \lfloor x \rfloor$ has discontinuities at all integers because $\lim_{x \to n} \lfloor x \rfloor$ does not exist when $n$ is an integer.
+
+<img src="images/all_discontinuities.png" alt="discontinuity" width="800" height="650">
+
+
+
+#### **Definition 2** 
+A function $f$ is *continuous from the right* at a number $a$ if
+
+$$
+\lim_{x \to a^+} f(x) = f(a)
+$$
+
+and $f$ is *continuous from the left* at $a$ if
+
+$$
+\lim_{x \to a^-} f(x) = f(a)
+$$
+
+
+
+#### **Deinition 3**
+ A function f is **continuous on an interval** if it is continuous at **every number** in the interval. 
+ 
+ If f is deined only on one side of an endpoint of the interval, we understand ***continuous at the endpoint*** to mean ***continuous from the right or continuous from the left***.
+
+ **Example** Show that the function $f(x) = 1 - \sqrt{1 - x^2}$ is continuous on the interval $[-1, 1]$.
+
+**Solution** If $-1 < a < 1$, then using the Limit Laws, we have:
+$$
+\begin{align*}
+\lim_{x \to a} f(x) &= \lim_{x \to a} \left(1 - \sqrt{1 - x^2}\right) \\
+&= 1 - \lim_{x \to a} \sqrt{1 - x^2} \quad \\
+&= 1 - \sqrt{\lim_{x \to a} (1 - x^2)} \quad  \\
+&= 1 - \sqrt{1 - a^2} \quad \\
+&= f(a)
+\end{align*}
+$$
+
+Thus, by Definition 1, $f$ is continuous at $a$ if $-1 < a < 1$. Similar calculations show that:
+$$
+\lim_{x \to -1^+} f(x) = 1 = f(-1) \quad \text{and} \quad \lim_{x \to 1^-} f(x) = 1 = f(1)
+$$
+so $f$ is continuous from the right at $-1$ and continuous from the left at $1$. Therefore, according to Definition 3, $f$ is continuous on $[-1, 1]$.
+
+***The graph of $f$ is the lower half of the circle***  $x^2 + (y - 1)^2 = 1$.
+
+<img src="images/semicircle_function.png" alt="semicircle" width="500" height="400">
+
+#### **Theorem 4** 
+If $f$ and $g$ are continuous at $a$ and $c$ is a constant, then the following functions are also continuous at $a$:  
+1. $f + g$  
+2. $f - g$  
+3. $cf$  
+4. $fg$  
+5. $\frac{f}{g}$ if $g(a) \neq 0$
+
+
+#### **Theorem 5**  
+**(a)** **Any polynomial** is continuous everywhere; that is, it is continuous on $\mathbb{R} = (-\infty, \infty)$.  
+
+**(b)** Any **rational function** is continuous wherever it is defined; that is, it is continuous on its domain.  
+
+**Proof**  
+**(a)** A polynomial is a function of the form  
+
+$$
+P(x) = c_nx^n + c_{n-1}x^{n-1} + \cdots + c_1x + c_0
+$$  
+
+where $c_0, c_1, \ldots, c_n$ are constants. We know that  
+
+$$
+\lim_{x \to a} c_0 = c_0 \quad 
+$$  
+
+and  
+
+$$
+\lim_{x \to a} x^m = a^m \quad (m = 1, 2, \ldots, n) \quad
+$$  
+
+This equation is precisely the statement that the function $f(x) = x^m$ is continuous. Thus, by part 3 of Theorem 4, the function $g(x) = cx^m$ is continuous. Since $P$ is a sum of functions of this form and a constant function, it follows from part 1 of Theorem 4 that $P$ is continuous.  
+
+**(b)** A rational function is a function of the form  
+
+$$
+f(x) = \frac{P(x)}{Q(x)}
+$$  
+
+where $P$ and $Q$ are polynomials. The domain of $f$ is $D = \{x \in \mathbb{R} \mid Q(x) \neq 0\}$. We know from part (a) that $P$ and $Q$ are continuous everywhere. Thus, by part 5 of Theorem 4, $f$ is continuous at every number in $D$.
+
+#### **Theorem 6** 
+The following types of functions are continuous at every number in their domains:
+- **Polynomials**
+- **Rational functions**
+- **Root functions**
+- **Trigonometric functions**
+- **Inverse trigonometric functions** 
+- **Exponential functions**
+- **Logarithmic functions**
+
+In symbols:
+- If $P(x)$ is a polynomial, then $P$ is continuous on $\mathbb{R}$
+- If $f(x) = \frac{P(x)}{Q(x)}$ is rational, then $f$ is continuous on $\{x \mid Q(x) \neq 0\}$
+- If $f(x) = x^{1/n}$ ($n \in \mathbb{N}$), then $f$ is continuous on:
+  - $[0, \infty)$ if $n$ is even
+  - $\mathbb{R}$ if $n$ is odd
+- Trigonometric functions ($\sin x$, $\cos x$, etc.) are continuous on their domains
+- Inverse trig functions ($\sin^{-1} x$, $\tan^{-1} x$, etc.) are continuous on their domains
+- Exponential functions ($a^x$) are continuous on $\mathbb{R}$
+- Logarithmic functions ($\log_a x$) are continuous on $(0, \infty)$
+
+**Example 1** Where is the function 
+
+$$
+f(x) = \frac{\ln x + \tan^{-1}x}{x^2 - 1}
+$$ 
+
+continuous?
+
+**Solution** We know from Theorem 6 that:
+- $y = \ln x$ is continuous for $x > 0$
+- $y = \tan^{-1}x$ is continuous on $\mathbb{R}$
+
+Thus, by part 1 of Theorem 4, $y = \ln x + \tan^{-1}x$ is continuous on $(0, \infty)$. 
+
+The denominator $y = x^2 - 1$ is a polynomial, so it's continuous everywhere. Therefore, by part 5 of Theorem 4($\frac{f}{g}$ if $g(a) \neq 0$), $f$ is continuous at all positive numbers $x$ except where:
+
+$$
+x^2 - 1 = 0 \iff x = \pm 1
+$$
+
+Since $\ln x$ requires $x > 0$, $f$ is continuous on $(0, 1)$ and $(1, \infty)$. 
+
+
+**Example 2** Evaluate 
+$$
+\lim_{x \to \pi} \frac{\sin x}{2 + \cos x}
+$$
+
+**Solution** Theorem 6 tells us:
+- $y = \sin x$ is continuous everywhere
+- $y = 2 + \cos x$ is continuous (sum of constant and cosine functions)
+
+Since $\cos x \geq -1$ for all $x$, the denominator satisfies:
+
+$$
+2 + \cos x \geq 1 > 0 \quad \text{for all } x
+$$
+
+Thus the ratio 
+
+$$
+f(x) = \frac{\sin x}{2 + \cos x}
+$$ 
+
+is continuous everywhere. By definition of continuity:
+
+$$
+\lim_{x \to \pi} f(x) = f(\pi) = \frac{\sin \pi}{2 + \cos \pi} = \frac{0}{2 - 1} = 0
+$$
+
+#### **Theorem 7** (Continuity of Composite Functions)  
+If $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, then the composite function $f \circ g$ defined by $(f \circ g)(x) = f(g(x))$ is continuous at $a$.
+
+**Proof**  
+Since $\lim_{x \to a} g(x) = g(a)$ (by continuity of $g$ at $a$) and $f$ is continuous at $g(a)$, we can apply the ***limit composition rule***:
+
+$$
+\lim_{x \to a} f(g(x)) = f\left(\lim_{x \to a} g(x)\right) = f(g(a)) = (f \circ g)(a)
+$$
+
+Thus, $f \circ g$ satisfies the definition of continuity at $x = a$.
+
+**Key Implications**:
+1. The composition preserves continuity at the point of evaluation
+2. If $g$ is continuous on its domain and $f$ is continuous on the range of $g$, then $f \circ g$ is continuous everywhere in $g$'s domain
+3. This justifies the continuity of functions like:
+   - $e^{x^2}$ (exponential composed with polynomial)
+   - $\sin(\ln x)$ (trigonometric composed with logarithmic)
+   - $\sqrt{\tan x}$ (root composed with trigonometric)
+
+**Example**:  Evaluate 
+
+$$
+\lim_{x \to 1} \arcsin\left(\frac{1 - \sqrt{x}}{1 - x}\right)
+$$
+
+**Solution**: Because $\arcsin$ is continuous (by Theorem 7), we can apply Theorem 8 (continuity of composite functions):
+
+$$
+\begin{align*}
+\lim_{x \to 1} \arcsin\left(\frac{1 - \sqrt{x}}{1 - x}\right) &= \arcsin\left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{1 - x}\right) \\
+&= \arcsin\left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{(1 - \sqrt{x})(1 + \sqrt{x})}\right) \quad \text{[Factoring difference of squares]} \\
+&= \arcsin\left(\lim_{x \to 1} \frac{1}{1 + \sqrt{x}}\right) \\
+&= \arcsin\left(\frac{1}{2}\right) \\
+&= \boxed{\dfrac{\pi}{6}}
+\end{align*}
+$$
+
+#### **Theorem 8： Intermediate Value Theorem**  
+Suppose that $f$ is continuous on the closed interval $[a, b]$ and let $N$ be any number between $f(a)$ and $f(b)$, where $f(a) \neq f(b)$. Then there exists a number $c$ in $(a, b)$ such that:
+
+$$
+f(c) = N
+$$
+
+**Key Conditions:**
+1. **Continuity**: $f$ must be continuous on the *closed* interval $[a, b]$.
+2. **Intermediate Value**: $N$ must satisfy either:
+   - $f(a) < N < f(b)$ (if $f(a) < f(b)$), or
+   - $f(b) < N < f(a)$ (if $f(b) < f(a)$).
+
+**Implications:**
+- Guarantees at least one solution $c$ exists in $(a, b)$ for $f(c) = N$.
+- Explains why continuous functions have "no jumps" (their graphs pass through all intermediate $y$-values).
+- Foundation for numerical root-finding methods (e.g., bisection method).
+
+<img src="images/IVT.png" alt="Intermediate Value Theorem" width = 800 height = 300>
+
+## 4. Limits at Infinity & Horizontal Asymptotes
+<img src="images/limit_infinit_1.png" alt="HA1" width = 300 height = 200>
+<img src="images/limit_infinite_2.png" alt="HA2" width = 300 height = 200>
+
+#### **Definition 1**  
+The limit of $f(x)$ as $x$ approaches infinity is $L$, denoted by:
+
+$$
+\lim_{x \to \infty} f(x) = L
+$$
+
+if for every $\epsilon > 0$, there exists a number $N$ such that:
+
+$$\forall x > N, \quad |f(x) - L| < \epsilon$$
+
+![precise definition](images/limit_at_infinity_1.png)
+
+#### **Definition 2**  
+The limit of $f(x)$ as $x$ approaches negative infinity is $L$, denoted by:
+
+$$
+\lim_{x \to -\infty} f(x) = L
+$$
+
+if for every $\epsilon > 0$, there exists a number $N$ such that:
+
+$$\forall x < N, \quad |f(x) - L| < \epsilon$$
+
+![precise definition 2](images/limit_at_infinity_2.png)
+
+#### **Definition 3**
+The line $y = L$ is called a **horizontal asymptote** of the curve $y = f(x)$ if either:
+
+$$
+\lim_{x \to \infty} f(x) = L \quad \text{or} \quad \lim_{x \to -\infty} f(x) = L
+$$
+
+
+**Possible Cases**:  
+A function can have:  
+- No horizontal asymptotes  
+- One horizontal asymptote (same limit at both $\infty$ and $-\infty$)  
+- Two different horizontal asymptotes (different limits at $\infty$ and $-\infty$)
+
+**Examples:**
+1. $f(x) = \frac{1}{x}$ has $y=0$ as horizontal asymptote for both $\pm\infty$
+2. $f(x) = \tan^{-1}x$ has:  
+   - $y=\frac{\pi}{2}$ as $x\to\infty$  
+   - $y=-\frac{\pi}{2}$ as $x\to-\infty$
+
+<img src="images/arctan.png" alt="HA2" width = 400 height = 350>
+
+**Example 1** 
+Find the horizontal and vertical asymptotes of the graph of the function:
+
+$$
+f(x) = \frac{\sqrt{2x^2 + 1}}{3x - 5}
+$$
+
+**Solution**  
+
+**Horizontal Asymptotes:**
+1. **As $x \to \infty$**:
+   Dividing numerator and denominator by $x$:
+
+   $$
+   \lim_{x\to\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to\infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x - 5}{x}} = \lim_{x\to\infty} \frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}}
+   $$
+
+   Since $\sqrt{x^2} = x$ for $x > 0$:
+
+   $$
+   = \frac{\sqrt{\lim_{x\to\infty}2 + \lim_{x\to\infty}\frac{1}{x^2}}}{\lim_{x\to\infty}3 - 5\lim_{x\to\infty}\frac{1}{x}} = \frac{\sqrt{2 + 0}}{3 - 0} = \frac{\sqrt{2}}{3}
+   $$
+
+   Thus, $y = \frac{\sqrt{2}}{3}$ is a horizontal asymptote.
+
+2. **As $x \to -\infty$**:
+   For $x < 0$, $\sqrt{x^2} = |x| = -x$:
+
+   $$
+   \lim_{x\to-\infty} \frac{\sqrt{2x^2 + 1}}{3x - 5} = \lim_{x\to-\infty} \frac{-\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} = \frac{-\sqrt{2}}{3}
+   $$
+
+   Thus, $y = -\frac{\sqrt{2}}{3}$ is another horizontal asymptote.
+
+**Vertical Asymptote:**
+- Occurs where denominator equals zero:
+
+  $$
+  3x - 5 = 0 \implies x = \frac{5}{3}
+  $$
+
+- Behavior near $x = \frac{5}{3}$:
+  - **Right-hand limit** ($x \to \frac{5}{3}^+$):
+
+    $$
+    \lim_{x\to(\frac{5}{3})^+} f(x) = +\infty
+    $$
+
+  - **Left-hand limit** ($x \to \frac{5}{3}^-$):
+
+    $$
+    \lim_{x\to(\frac{5}{3})^-} f(x) = -\infty
+    $$
+
+**Conclusion**:
+- **Horizontal asymptotes**: $y = \frac{\sqrt{2}}{3}$ and $y = -\frac{\sqrt{2}}{3}$
+- **Vertical asymptote**: $x = \frac{5}{3}$
+
+<img src="images/function_with_asymptotes.png" alt="HA2" width = 600 height = 400>
+
+**Example 2**: Evaluate 
+$$
+\lim_{x \to 0^-} e^{1/x}
+$$
+
+**Solution**:  
+Let $t = \frac{1}{x}$. As $x \to 0^-$, we have:
+$$
+t \to -\infty
+$$
+
+Using the known limit property:
+$$
+\lim_{t \to -\infty} e^t = 0
+$$
+
+Therefore:
+$$
+\lim_{x \to 0^-} e^{1/x} = \lim_{t \to -\infty} e^t = \boxed{0}
+$$
+
+## 5. Derivatives and Rates of Change
+### 5.1 **Definition of the Derivative at a Point**:
+The derivative of a function $f$ at a point $a$, denoted by $f'(a)$, is defined as:
+
+$$
+f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+$$
+
+**Key Components:**
+1. **Difference Quotient**:  
+   $\frac{f(x) - f(a)}{x - a}$ represents the average rate of change of $f$ between $x$ and $a$.
+
+2. **Limit Interpretation**:  
+   The derivative $f'(a)$ is the instantaneous rate of change as $x$ approaches $a$.
+
+3. **Geometric Meaning**:  
+   This limit gives the slope of the tangent line to the curve $y = f(x)$ at the point $(a, f(a))$.
+
+**Alternative Notations:**
+- Leibniz notation: $\left.\frac{df}{dx}\right|_{x=a}$
+- Lagrange notation: $f'(a)$
+- Newtonian notation: $\dot{f}(a)$
+
+
+#### **Instantaneous Rate of Change**  
+The instantaneous rate of change of a function $f$ at a point is given by:
+
+$$
+\text{Instantaneous rate of change} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+$$
+
+**Key Components:**
+1. **Difference Quotient**:  
+   $\frac{\Delta y}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}$ represents the average rate of change over the interval $[x_1, x_2]$.
+
+2. **Limit Process**:  
+   Taking the limit as $x_2 \to x_1$ ($\Delta x \to 0$) gives the instantaneous rate at $x = x_1$.
+
+3. **Geometric Interpretation**:  
+   This equals the slope of the tangent line to $y = f(x)$ at $x = x_1$.
+
+<img src="images/derivative.png" alt="rate of change" width = 300 height = 300>
+
+### **5.2 The Derivative as a Function**
+#### **5.2.1 Definition of the Derivative**:
+
+$$
+\boxed{f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}}
+$$
+
+
+**Example**: Find $f'(x)$ if 
+
+$$
+f(x) = \frac{1 - x}{2 + x}
+$$
+
+**Solution**:
+
+$$
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\
+&= \lim_{h \to 0} \frac{\frac{1 - (x+h)}{2 + (x+h)} - \frac{1 - x}{2 + x}}{h} \\
+&= \lim_{h \to 0} \frac{(1 - x - h)(2 + x) - (1 - x)(2 + x + h)}{h(2 + x + h)(2 + x)} \\
+&= \lim_{h \to 0} \frac{(2 - x - 2h - x^2 - xh) - (2 - x + h - x^2 - xh)}{h(2 + x + h)(2 + x)} \\
+&= \lim_{h \to 0} \frac{-3h}{h(2 + x + h)(2 + x)} \\
+&= \lim_{h \to 0} \frac{-3}{(2 + x + h)(2 + x)} \\
+&= -\frac{3}{(2 + x)^2}
+\end{align*}
+$$
+
+**Final Answer**:
+
+$$
+f'(x) = \boxed{-\dfrac{3}{(2 + x)^2}}
+$$
+
+#### 5.2.2 Derivative Notations
+The derivative of $f$ can be represented in multiple equivalent ways:
+
+$$
+f'(x) = y' = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx}f(x) = Df(x) = D_x f(x)
+$$
+
+#### 5.2.3 Definition of Differentiability
+A function $f$ is:
+- **Differentiable at a point $a$** if $f'(a)$ exists
+- **Differentiable on an interval** if it is differentiable at every point in:
+  - Open intervals: $(a, b)$, $(a, \infty)$, or $(-\infty, a)$
+  - The entire real line: $(-\infty, \infty)$
+
+**Example 5**: Where is the function $f(x) = |x|$ differentiable?
+
+**Solution**:
+
+**Case 1: $x > 0$ ($f(x) = x$)**
+For $x > 0$, we can choose $h$ small enough that $x + h > 0$, so $|x+h| = x+h$:
+
+$$
+f'(x) = \lim_{h \to 0} \frac{|x+h| - |x|}{h} = \lim_{h \to 0} \frac{(x+h) - x}{h} = \lim_{h \to 0} \frac{h}{h} = 1
+$$
+
+Thus, $f$ is differentiable for all $x > 0$ with $f'(x) = 1$.
+
+**Case 2: $x < 0$ ($f(x) = -x$)**
+For $x < 0$, choose $h$ so $x + h < 0$, giving $|x+h| = -(x+h)$:
+
+$$
+f'(x) = \lim_{h \to 0} \frac{-(x+h) - (-x)}{h} = \lim_{h \to 0} \frac{-h}{h} = -1
+$$
+
+Thus, $f$ is differentiable for all $x < 0$ with $f'(x) = -1$.
+
+**Case 3: $x = 0$**
+At $x = 0$, we examine:
+
+$$
+f'(0) = \lim_{h \to 0} \frac{|h| - 0}{h} = \lim_{h \to 0} \frac{|h|}{h}
+$$
+
+- **Right-hand limit** ($h \to 0^+$):
+  $$
+  \lim_{h \to 0^+} \frac{h}{h} = 1
+  $$
+
+- **Left-hand limit** ($h \to 0^-$):
+  $$
+  \lim_{h \to 0^-} \frac{-h}{h} = -1
+  $$
+
+Since the left and right limits disagree, $f'(0)$ **does not exist**.
+
+### Conclusion:
+- **Differentiable**: For all $x \neq 0$
+- **Not differentiable**: At $x = 0$ (sharp "corner")
+
+The derivative function is:
+
+$$
+f'(x) = \begin{cases}
+1 & \text{if } x > 0 \\
+-1 & \text{if } x < 0
+\end{cases}
+$$
+
+<img src="images/limit_2.png" alt="|x|" width = 300 height = 300>
+
+#### 5.2.4 Differentiability Implies Continuity
+**Theorem**: If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
+
+**Proof Outline:**
+1. Differentiability requires:
+   $$ \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a) \text{ exists} $$
+2. Rewrite the difference quotient:
+   $$ f(a+h)-f(a) = h \cdot \frac{f(a+h)-f(a)}{h} $$
+3. Take limits as $h \to 0$:
+   $$ \lim_{h \to 0} [f(a+h)-f(a)] = 0 \cdot f'(a) = 0 $$
+4. Thus:
+   $$ \lim_{h \to 0} f(a+h) = f(a) $$
+   which is exactly the definition of continuity.
+
+#### Important Notes:
+- The converse is false: continuity does not imply differentiability (e.g., $f(x)=|x|$ at $x=0$)
+- Differentiability requires "smoothness" without sharp corners or vertical tangents
