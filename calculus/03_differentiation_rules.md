@@ -430,7 +430,7 @@ $$
 2x + 2y \frac{dy}{dx} = 0
 $$
 
-Solve for \( \frac{dy}{dx} \):
+Solve for $\frac{dy}{dx}$:
 
 $$
 2y \frac{dy}{dx} = -2x \quad \Rightarrow \quad \frac{dy}{dx} = -\frac{x}{y}
@@ -816,9 +816,9 @@ $$ \boxed{\frac{d}{dx} \left( x^{\sqrt{x}} \right) = x^{\sqrt{x}} \left( \frac{2
 - Logarithmic differentiation simplifies complex exponent cases
 - The derivative combines power and exponential rule aspects
 
-###  *expand knowledge: The number $e$ as a Limit*
+###  *expand knowledge: The number* $e$ *as a Limit*
 #### Derivation:
-1. **Given** the natural logarithm function \( f(x) = \ln x \), its derivative is:
+1. **Given** the natural logarithm function $ f(x) = \ln x $, its derivative is:
 
 $$ f'(x) = \frac{1}{x} \quad \Rightarrow \quad f'(1) = 1 $$
 
@@ -838,7 +838,7 @@ $$ e^1 = e^{\lim_{x \to 0} \ln\left( (1+x)^{1/x} \right)} = \lim_{x \to 0} (1+x)
 
 $$ \boxed{e = \lim_{x \to 0} (1+x)^{1/x}} $$
 
-#### Alternative Form (\( n \to \infty \)):
+#### Alternative Form ($n \to \infty$):
 Let \( n = 1/x \). As \( x \to 0^+ \), \( n \to \infty \):
 
 $$ \boxed{e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n } $$
@@ -848,7 +848,7 @@ $$ \boxed{e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n } $$
 ### Linear Approximation
 
 **Theorem:**
-For a function \( f \) that is differentiable at \( a \), the linear approximation \( L(x) \) to \( f \) at \( a \) is given by:
+For a function $f$ that is differentiable at $a$, the linear approximation $L(x)$ to $f$ at $a$ is given by:
 
 $$
 L(x) = f(a) + f'(a)(x-a)
@@ -858,12 +858,12 @@ called the linearization of $f$ at $a$.
 
 ### Linear Approximations of Trigonometric Functions at 0
 
-#### For \( f(x) = \sin x \) at \( a = 0 \):
+#### For $f(x) = \sin x$ at $a = 0$:
 1. **Function and derivative**:
 
 $$ f(x) = \sin x \quad \Rightarrow \quad f'(x) = \cos x $$
 
-2. **Evaluate at \( x = 0 \)**:
+2. **Evaluate at $x = 0$**:
 
 $$ f(0) = \sin 0 = 0 $$
 $$ f'(0) = \cos 0 = 1 $$
@@ -877,7 +877,7 @@ $$ \boxed{L(x) = x} $$
 
 $$ \boxed{\sin x \approx x} \quad \text{(near } x = 0) $$
 
-#### For \( f(x) = \cos x \) at \( a = 0 \):
+#### For $f(x) = \cos x$ at $a = 0$:
 1. **Function and derivative**:
 
 $$ f(x) = \cos x \quad \Rightarrow \quad f'(x) = -\sin x $$
@@ -897,17 +897,17 @@ $$ \boxed{L(x) = 1} $$
 $$ \boxed{\cos x \approx 1} \quad \text{(near } x = 0) $$
 
 #### Key Observations:
-- These approximations are most accurate when \( x \) is near 0 (typically \( |x| < 0.1 \) radians)
-- For small angles \( \theta \) (in radians):
-  - \( \sin \theta \approx \theta \)
-  - \( \cos \theta \approx 1 \)
-  - \( \tan \theta \approx \theta \)
-- The error in these approximations increases as \( |x| \) grows
+- These approximations are most accurate when $x$ is near 0 (typically $|x| < 0.1$ radians)
+- For small angles $\theta$ (in radians):
+  - $ \sin \theta \approx \theta $
+  - $\cos \theta \approx 1$
+  - $\tan \theta \approx \theta$
+- The error in these approximations increases as $|x|$ grows
 
 ### Differentials
 
 **Definition:**
-The differential \( dy \) of a function \( y = f(x) \) is given by:
+The differential $dy$ of a function $y = f(x)$ is given by:
 
 $$
 dy = f'(x) \, dx
@@ -916,13 +916,13 @@ $$
 <img src="images/differential.png">
 
 **Example:**
-Find the differential \( dy \) for \( y = x^2 \):
+Find the differential $dy for $y = x^2$:
 
 1. **Find the derivative**:
 
 $$ f(x) = x^2 \quad \Rightarrow \quad f'(x) = 2x $$
 
-2. **Express \( dy \)**:
+2. **Express $dy$**:
 
 $$ dy = f'(x) \, dx = 2x \, dx $$
 
@@ -1069,7 +1069,7 @@ Take the natural logarithm of both sides:
 $$ y = \ln\left(x + \sqrt{x^2 + 1}\right) $$
 
 **Conclusion:**  
-Since we began with \( y = \sinh^{-1}x \), we've shown:
+Since we began with $y = \sinh^{-1}x$, we've shown:
 
 $$ \boxed{\sinh^{-1}x = \ln\left(x + \sqrt{x^2 + 1}\right)} $$
 
