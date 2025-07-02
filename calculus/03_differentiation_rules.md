@@ -380,12 +380,12 @@ $$
 
 ### Differentiating Exponential Functions Using the Chain Rule
 
-We can use the Chain Rule to differentiate an exponential function with any base \( b > 0 \).  
-Recall that \( b = e^{\ln b} \). Therefore:
+We can use the Chain Rule to differentiate an exponential function with any base $b > 0$.  
+Recall that $b = e^{\ln b}$. Therefore:
 
 $$ b^x = \left(e^{\ln b}\right)^x = e^{(\ln b) x} $$
 
-Applying the Chain Rule to differentiate \( \frac{d}{dx} (b^x) \):
+Applying the Chain Rule to differentiate $\frac{d}{dx} (b^x)$S:
 
 $$
 \begin{align*}
