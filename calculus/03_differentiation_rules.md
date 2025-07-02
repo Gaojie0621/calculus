@@ -560,12 +560,15 @@ $$ \boxed{\frac{d}{dx} (\sin^{-1}x) = \frac{1}{\sqrt{1 - x^2}}} $$
 $$ \tan y = x \quad \text{with} \quad -\frac{\pi}{2} < y < \frac{\pi}{2} $$
 
 Differentiating implicitly with respect to $x$:
+
 $$ \sec^2 y \frac{dy}{dx} = 1 \quad \Rightarrow \quad \frac{dy}{dx} = \frac{1}{\sec^2 y} $$
 
 Using the identity $1 + \tan^2 y = \sec^2 y$:
+
 $$ \frac{dy}{dx} = \frac{1}{1 + \tan^2 y} = \frac{1}{1 + x^2} $$
 
 **Final result:**
+
 $$ \boxed{\frac{d}{dx} (\tan^{-1}x) = \frac{1}{1 + x^2}} $$
 
 ---
@@ -857,33 +860,41 @@ called the linearization of $f$ at $a$.
 
 #### For \( f(x) = \sin x \) at \( a = 0 \):
 1. **Function and derivative**:
-   $$ f(x) = \sin x \quad \Rightarrow \quad f'(x) = \cos x $$
+
+$$ f(x) = \sin x \quad \Rightarrow \quad f'(x) = \cos x $$
 
 2. **Evaluate at \( x = 0 \)**:
-   $$ f(0) = \sin 0 = 0 $$
-   $$ f'(0) = \cos 0 = 1 $$
+
+$$ f(0) = \sin 0 = 0 $$
+$$ f'(0) = \cos 0 = 1 $$
 
 3. **Linearization (tangent line approximation)**:
-   $$ L(x) = f(0) + f'(0)(x - 0) = 0 + 1 \cdot x $$
-   $$ \boxed{L(x) = x} $$
+
+$$ L(x) = f(0) + f'(0)(x - 0) = 0 + 1 \cdot x $$
+$$ \boxed{L(x) = x} $$
 
 4. **Linear approximation**:
-   $$ \boxed{\sin x \approx x} \quad \text{(near } x = 0) $$
+
+$$ \boxed{\sin x \approx x} \quad \text{(near } x = 0) $$
 
 #### For \( f(x) = \cos x \) at \( a = 0 \):
 1. **Function and derivative**:
-   $$ f(x) = \cos x \quad \Rightarrow \quad f'(x) = -\sin x $$
+
+$$ f(x) = \cos x \quad \Rightarrow \quad f'(x) = -\sin x $$
 
 2. **Evaluate at \( x = 0 \)**:
-   $$ f(0) = \cos 0 = 1 $$
-   $$ f'(0) = -\sin 0 = 0 $$
+
+$$ f(0) = \cos 0 = 1 $$
+$$ f'(0) = -\sin 0 = 0 $$
 
 3. **Linearization**:
-   $$ L(x) = f(0) + f'(0)(x - 0) = 1 + 0 \cdot x $$
-   $$ \boxed{L(x) = 1} $$
+
+$$ L(x) = f(0) + f'(0)(x - 0) = 1 + 0 \cdot x $$
+$$ \boxed{L(x) = 1} $$
 
 4. **Linear approximation**:
-   $$ \boxed{\cos x \approx 1} \quad \text{(near } x = 0) $$
+
+$$ \boxed{\cos x \approx 1} \quad \text{(near } x = 0) $$
 
 #### Key Observations:
 - These approximations are most accurate when \( x \) is near 0 (typically \( |x| < 0.1 \) radians)
@@ -1025,32 +1036,30 @@ $$ \frac{d}{dx} (\coth x) = -\text{csch}^2 x $$
 
 $$ \sinh^{-1}x = \ln\left(x + \sqrt{x^2 + 1}\right) \quad \text{for all } x \in \mathbb{R} $$
 
-**Proof that \(\sinh^{-1}x = \ln\left(x + \sqrt{x^2 + 1}\right)\)**
+**Proof that $\sinh^{-1}x = \ln\left(x + \sqrt{x^2 + 1}\right)$**
 
-Let \( y = \sinh^{-1}x \). By definition, this means:
+Let $y = \sinh^{-1}x$. By definition, this means:
 
 $$ x = \sinh y = \frac{e^y - e^{-y}}{2} $$
 
-Multiply through by 2:
-
 $$ e^y - e^{-y} = 2x $$
 
-Multiply through by \( e^y \) to eliminate the negative exponent:
+Multiply through by $e^y$ to eliminate the negative exponent:
 
 $$ e^{2y} - 1 = 2x e^y $$
 
 
 $$ e^{2y} - 2x e^y - 1 = 0 $$
 
-Let \( z = e^y \), which gives:
+Let $z = e^y$, which gives:
 
 $$ z^2 - 2x z - 1 = 0 $$
  
-Using the quadratic formula \( z = \frac{2x \pm \sqrt{(2x)^2 + 4}}{2} \):
+Using the quadratic formula $z = \frac{2x \pm \sqrt{(2x)^2 + 4}}{2}$:
 
 $$ z = \frac{2x \pm \sqrt{4x^2 + 4}}{2} = x \pm \sqrt{x^2 + 1} $$
  
-Since \( z = e^y > 0 \) and \( x - \sqrt{x^2 + 1} < 0 \) (because \( \sqrt{x^2 + 1} > |x| \)), we discard the negative solution:
+Since $z = e^y > 0$ and $x - \sqrt{x^2 + 1} < 0$ (because $ \sqrt{x^2 + 1} > |x|$ ), we discard the negative solution:
 
 $$ e^y = x + \sqrt{x^2 + 1} $$
 
@@ -1077,7 +1086,7 @@ $$ \cosh^{-1}x = \ln\left(x + \sqrt{x^2 - 1}\right) \quad \text{for } x \geq 1 $
 $$ \tanh^{-1}x = \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right) \quad \text{for } |x| < 1 $$
 
    *Behavior*:  
-   Approaches infinity as \( x \to \pm 1 \).
+   Approaches infinity as $x \to \pm 1$.
 
 ### Derivatives of Inverse Hyperbolic Functions
 
