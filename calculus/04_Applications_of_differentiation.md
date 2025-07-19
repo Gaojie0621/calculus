@@ -23,9 +23,6 @@ If *f* has a **local maximum** or **local minimum** at *c*, and if *f'*(*c*) exi
 
 $$f'(c) = 0$$  
 
-#### **Proof**  
-If $f$ has a **local maximum** or **local minimum** at $c$, and if $f'(c)$ exists, then:  
-$ f'(c) = 0 $  
 
 #### **Proof**  
 Suppose (without loss of generality) that $f$ has a **local maximum** at $c$. Then, by definition:  
@@ -33,7 +30,7 @@ Suppose (without loss of generality) that $f$ has a **local maximum** at $c$. Th
 $$ f(c) \geq f(x)\text{ for all } x \text{ sufficiently close to } c$$
 
 For small $h$ (positive or negative):  
-$ f(c) \geq f(c + h) \implies f(c + h) - f(c) \leq 0 $.  
+$$f(c) \geq f(c + h) \implies f(c + h) - f(c) \leq 0$$.  
 
 1. **Right-hand limit ($h \to 0^+$)**:  
 
@@ -479,9 +476,9 @@ Several indeterminate forms arise from the limit:
 
 $$\lim_{x \to a} f(x)^{g(x)}$$
 
-1. $$\lim_{x \to a} f(x) \to 0 \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } \frac{0}{0}$$
+1. $$\lim_{x \to a} f(x) \to 0 \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } 0^0$$
 
-2. $$\lim_{x \to a} f(x) \to \infty \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } \frac{\infty}{0}$$
+2. $$\lim_{x \to a} f(x) \to \infty \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } {\infty}^0$$
 
 3. $$\lim_{x \to a} f(x) \to 1 \quad \text{and} \quad \lim_{x \to a} g(x) \to \infty \quad \text{type } 1^{\infty}$$
 
