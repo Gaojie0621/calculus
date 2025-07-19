@@ -154,23 +154,21 @@ Now we check that $h$ satisfies the three conditions of Rolle’s Theorem:
 1. **Continuity**: $h(x)$ is continuous on $[a, b]$ because it is the difference of two continuous functions ($f$ and a linear function).
 2. **Differentiability**: $h(x)$ is differentiable on $(a, b)$ because both $f$ and the linear function are differentiable. In fact, the derivative is:
 
-   $$
-   h'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}
-   $$
+$h'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}$
 
 3. **Equal endpoint values**:
 
    - At $x = a$:
 
-     $$
-     h(a) = f(a) - f(a) - \frac{f(b) - f(a)}{b - a}(a - a) = 0
-     $$
+$$
+h(a) = f(a) - f(a) - \frac{f(b) - f(a)}{b - a}(a - a) = 0
+$$
 
    - At $x = b$:
 
-     $$
-     h(b) = f(b) - f(a) - \frac{f(b) - f(a)}{b - a}(b - a) = f(b) - f(a) - (f(b) - f(a)) = 0
-     $$
+$$
+h(b) = f(b) - f(a) - \frac{f(b) - f(a)}{b - a}(b - a) = f(b) - f(a) - (f(b) - f(a)) = 0
+$$
 
 ---
 
@@ -282,6 +280,7 @@ provided that the limit on the right exists (or is $\infty$ or $-\infty$).
 #### Example
 
 Calculate  
+
 $$
 \lim_{x \to \infty} \frac{e^x}{x^2}
 $$
@@ -572,15 +571,15 @@ Determine where $f(x)$ is defined.
 **C. Symmetry**  
 1. **Even Function:**  
    If $f(-x) = f(x)$, the graph is symmetric about the y-axis.  
-   _Examples: $y = x^2$, $|x|$, $\cos x$_
+   *Examples: $y = x^2$, $|x|$, $\cos x$*
 
 2. **Odd Function:**  
    If $f(-x) = -f(x)$, the graph is symmetric about the origin.  
-   _Examples: $y = x^3$, $x$, $\sin x$_
+   *Examples: $y = x^3$, $x$, $\sin x$*
 
 3. **Periodic Function:**  
    If $f(x + p) = f(x)$, the function has period $p$.  
-   _Examples: $\sin x$ (period $2\pi$), $\tan x$ (period $\pi$)_
+   *Examples: $\sin x$ (period $2\pi$), $\tan x$ (period $\pi$)*
 
 
 **D. Asymptotes**  
