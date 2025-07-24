@@ -796,6 +796,7 @@ $$
 
 ## 6. Trigonometric Integrals
 
+### 6.1
 **Example 1** Find $\int \sin^5 x \cos^2 x \, dx$.
 
 **Solution**  
@@ -893,12 +894,12 @@ $$
 \end{aligned}
 $$
 
-### Key Points:
+#### Key Points:
 - **Odd Power Priority**: Always check for odd exponents first (Cases a/b).
 - **Half-Angle for Evens**: When both exponents are even (Case c), use identities to reduce powers.
 - **Mixed Strategies**: For combinations like $\sin^{2k} x \cos^{2l+1} x$, apply Case (a) first.
 
----
+### 6.2
 
 **Example 3** Evaluate $\int \tan^6 x \sec^4 x \, dx$.
 
@@ -998,21 +999,21 @@ $$
 
 
 
-### **Examples**
-#### Example 3 (Case a): $\int \tan^6 x \sec^4 x \, dx$
+#### **Examples**
+##### Example 3 (Case a): $\int \tan^6 x \sec^4 x \, dx$
 - $n=4$ (even), so save $\sec^2 x$:
   $$
   \int \tan^6 x (1 + \tan^2 x) \sec^2 x \, dx \xrightarrow{u=\tan x} \int u^6 (1 + u^2) \, du
   $$
 
-#### Example 4 (Case b): $\int \tan^5 \theta \sec^7 \theta \, d\theta$
+##### Example 4 (Case b): $\int \tan^5 \theta \sec^7 \theta \, d\theta$
 - $m=5$ (odd), so save $\sec \theta \tan \theta$:
   $$
   \int (\sec^2 \theta - 1)^2 \sec^6 \theta \cdot (\sec \theta \tan \theta \, d\theta) \xrightarrow{u=\sec \theta} \int (u^2 - 1)^2 u^6 \, du
   $$
 
 
-### **Key Notes**
+#### **Key Notes**
 1. **Priority**:
    - **Even secant** (Case a) takes precedence over odd tangent (Case b).
    - If both conditions apply (e.g., $\tan^3 x \sec^4 x$), use **Case (a)** first.
@@ -1025,6 +1026,7 @@ $$
    - Always keep $\sec^2 x = 1 + \tan^2 x$ and $\tan^2 x = \sec^2 x - 1$ handy.
 
 **Summary**:
+
 $$
 \boxed{
 \begin{aligned}
@@ -1034,7 +1036,7 @@ $$
 }
 $$
 
-### Integral Formulas and Derivations
+### 6.3 Integral Formulas and Derivations
 
 #### 1. Integral of Tangent
 
@@ -1092,7 +1094,7 @@ $$
 }
 $$
 
-### Example 5: Find $\int \tan^3 x \, dx$
+##### Example 5: Find $\int \tan^3 x \, dx$
 
 **Solution**  
 We rewrite $\tan^2 x$ using the identity $\tan^2 x = \sec^2 x - 1$:
@@ -1121,7 +1123,7 @@ $$
 $$
 
 
-#### Example 6: Find $\int \sec^3 x \, dx$
+##### Example 6: Find $\int \sec^3 x \, dx$
 
 **Solution**  
 We use integration by parts with:
@@ -1155,7 +1157,7 @@ $$
 $$
 
 
-#### Key Steps Summary
+##### Key Steps Summary
 1. **For $\tan^3 x$**:
    - Used $\tan^2 x = \sec^2 x - 1$ to split the integral.
    - Applied substitution for $\tan x \sec^2 x$ term.
@@ -1167,7 +1169,7 @@ $$
    - Recognized the original integral $\int \sec^3 x \, dx$ appears on both sides.
    - Solved algebraically for the final result.
 
-### Strategy for Evaluating Products of Trigonometric Functions
+### 6.4 Strategy for Evaluating Products of Trigonometric Functions
 
 To evaluate integrals of the form:
 1. **(a)** $\int \sin mx \cos nx \, dx$
@@ -1185,7 +1187,7 @@ $$
 $$
 
 
-#### Example 7: Evaluate $\int \sin 4x \cos 5x \, dx$
+##### Example 7: Evaluate $\int \sin 4x \cos 5x \, dx$
 
 **Solution**  
 Using identity (a) with $A = 4x$ and $B = 5x$:
@@ -1205,6 +1207,446 @@ $$
 $$
 
 
-### When to Use This Method:
+#### When to Use This Method:
 - **Products of sine and cosine**: Always start with these identities when the integrand is a product of trigonometric functions with different arguments.
 - **Avoid integration by parts**: These identities simplify the problem significantly compared to other techniques.
+
+### 6.5 Trigonometry Substitution
+
+#### Trigonometric Substitution for Integrals Involving Radicals（涉及根式积分的三角代换）
+
+When evaluating integrals containing expressions like $\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$, or $\sqrt{x^2 - a^2}$, **trigonometric substitutions** simplify the integrand using Pythagorean identities.
+
+#### Key Substitutions and Identities:
+| Expression          | Substitution         | Identity Used               | Interval for $\theta$       |
+|---------------------|---------------------|----------------------------|----------------------------|
+| $\sqrt{a^2 - x^2}$  | $x = a \sin \theta$ | $1 - \sin^2 \theta = \cos^2 \theta$ | $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$ |
+| $\sqrt{a^2 + x^2}$  | $x = a \tan \theta$ | $1 + \tan^2 \theta = \sec^2 \theta$ | $-\frac{\pi}{2} < \theta < \frac{\pi}{2}$ |
+| $\sqrt{x^2 - a^2}$  | $x = a \sec \theta$ | $\sec^2 \theta - 1 = \tan^2 \theta$ | $0 \leq \theta < \frac{\pi}{2}$ or $\pi \leq \theta < \frac{3\pi}{2}$ |
+
+
+##### Example 1: Evaluate $\int \frac{\sqrt{9 - x^2}}{x^2} \, dx$
+
+**Solution**  
+1. **Substitute**:  
+   Let $x = 3 \sin \theta$ where $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$. Then:
+
+$$
+dx = 3 \cos \theta \, d\theta \quad \text{and} \quad \sqrt{9 - x^2} = \sqrt{9 \cos^2 \theta} = 3 |\cos \theta| = 3 \cos \theta \quad (\text{since } \cos \theta \geq 0)
+$$
+
+2. **Rewrite the Integral**:
+
+$$
+\int \frac{\sqrt{9 - x^2}}{x^2} \, dx = \int \frac{3 \cos \theta}{9 \sin^2 \theta} \cdot 3 \cos \theta \, d\theta = \int \frac{\cos^2 \theta}{\sin^2 \theta} \, d\theta = \int \cot^2 \theta \, d\theta
+$$
+
+3. **Simplify Using Identity**:
+
+$$
+\cot^2 \theta = \csc^2 \theta - 1 \quad \Rightarrow \quad \int (\csc^2 \theta - 1) \, d\theta = -\cot \theta - \theta + C
+$$
+
+4. **Convert Back to $x$**:
+   - From the substitution $x = 3 \sin \theta$, draw a right triangle:
+     - Hypotenuse = 3, Opposite = $x$, Adjacent = $\sqrt{9 - x^2}$.
+     - Thus, $\cot \theta = \frac{\sqrt{9 - x^2}}{x}$ and $\theta = \sin^{-1}\left(\frac{x}{3}\right)$.
+
+   **Final Answer**:
+
+$$
+\boxed{ -\frac{\sqrt{9 - x^2}}{x} - \sin^{-1}\left(\frac{x}{3}\right) + C }
+$$
+
+
+##### Why This Works:
+- **Radical Simplification**: Substitutions like $x = a \sin \theta$ exploit Pythagorean identities to eliminate square roots.
+- **One-to-One Requirement**: Restricting $\theta$ ensures the substitution is invertible.
+- **Geometric Interpretation**: Right triangles help revert to the original variable.
+
+**Verification**:  
+Differentiate the result to confirm:
+
+$$
+\frac{d}{dx}\left(-\frac{\sqrt{9 - x^2}}{x} - \sin^{-1}\left(\frac{x}{3}\right)\right) = \frac{\sqrt{9 - x^2}}{x^2} - \frac{1}{\sqrt{9 - x^2}} + \frac{1}{\sqrt{9 - x^2}} = \frac{\sqrt{9 - x^2}}{x^2}
+$$
+
+<img src="images/trig_integral.png" width=300>
+
+#### General Workflow:
+1. **Choose Substitution**: Match the radical form to the table.
+2. **Compute $dx$ and Simplify**: Express everything in terms of $\theta$.
+3. **Integrate**: Use trigonometric identities to simplify.
+4. **Back-Substitute**: Use triangles or identities to return to $x$.
+
+##### Example 2: Find $\int \frac{1}{x^2 \sqrt{x^2 + 4}} \, dx$
+
+**Solution**  
+1. **Trigonometric Substitution**:  
+   Let $x = 2 \tan \theta$, where $-\frac{\pi}{2} < \theta < \frac{\pi}{2}$. Then:
+
+$$
+dx = 2 \sec^2 \theta \, d\theta \quad \text{and} \quad \sqrt{x^2 + 4} = \sqrt{4(\tan^2 \theta + 1)} = 2 \sec \theta
+$$
+
+2. **Rewrite the Integral**:
+
+$$
+\int \frac{1}{x^2 \sqrt{x^2 + 4}} \, dx = \int \frac{2 \sec^2 \theta \, d\theta}{4 \tan^2 \theta \cdot 2 \sec \theta} = \frac{1}{4} \int \frac{\sec \theta}{\tan^2 \theta} \, d\theta
+$$
+
+3. **Simplify the Integrand**:
+   Convert to sine and cosine:
+
+$$
+\frac{\sec \theta}{\tan^2 \theta} = \frac{1/\cos \theta}{\sin^2 \theta / \cos^2 \theta} = \frac{\cos \theta}{\sin^2 \theta}
+$$
+
+Let $u = \sin \theta \Rightarrow du = \cos \theta \, d\theta$:
+
+$$
+\frac{1}{4} \int \frac{\cos \theta}{\sin^2 \theta} \, d\theta = \frac{1}{4} \int \frac{du}{u^2} = \frac{1}{4} \left( -\frac{1}{u} \right) + C = -\frac{1}{4 \sin \theta} + C
+$$
+
+4. **Back-Substitute**:
+   - From $x = 2 \tan \theta$, draw a right triangle:
+     - Opposite = $x$, Adjacent = $2$, Hypotenuse = $\sqrt{x^2 + 4}$.
+     - Thus, $\sin \theta = \frac{x}{\sqrt{x^2 + 4}}$.
+
+   **Final Answer**:
+
+$$
+\boxed{ -\frac{\sqrt{x^2 + 4}}{4x} + C }
+$$
+
+
+### Key Steps:
+1. **Substitution**: Chose $x = 2 \tan \theta$ to simplify $\sqrt{x^2 + 4}$ via $1 + \tan^2 \theta = \sec^2 \theta$.
+2. **Simplification**: Expressed the integrand in terms of $\sin \theta$ and $\cos \theta$ for easier integration.
+3. **Geometric Interpretation**: Used a right triangle to revert to the original variable $x$.
+
+<img src="images/trig_integral_2.png" width = 300>
+
+##### Example 3: Evaluate $\int \frac{dx}{\sqrt{x^2 - a^2}}$, where $a > 0$
+
+**Solution**  
+1. **Trigonometric Substitution**:  
+   Let $x = a \sec \theta$, where $0 < \theta < \frac{\pi}{2}$ or $\pi < \theta < \frac{3\pi}{2}$. Then:
+
+$$
+dx = a \sec \theta \tan \theta \, d\theta \quad \text{and} \quad \sqrt{x^2 - a^2} = \sqrt{a^2 (\sec^2 \theta - 1)} = a |\tan \theta| = a \tan \theta
+$$
+
+   *(Note: $\tan \theta \geq 0$ in the chosen intervals)*
+
+2. **Simplify the Integral**:
+
+$$
+\int \frac{dx}{\sqrt{x^2 - a^2}} = \int \frac{a \sec \theta \tan \theta}{a \tan \theta} \, d\theta = \int \sec \theta \, d\theta = \ln |\sec \theta + \tan \theta| + C
+$$
+
+3. **Back-Substitute**:
+   - From $x = a \sec \theta$, draw a right triangle:
+     - Hypotenuse = $x$, Adjacent = $a$, Opposite = $\sqrt{x^2 - a^2}$.
+     - Thus, $\sec \theta = \frac{x}{a}$ and $\tan \theta = \frac{\sqrt{x^2 - a^2}}{a}$.
+
+   Substitute these into the result:
+
+$$
+\ln \left| \frac{x}{a} + \frac{\sqrt{x^2 - a^2}}{a} \right| + C = \ln \left| x + \sqrt{x^2 - a^2} \right| - \ln a + C
+$$
+
+4. **Simplify the Constant**:
+   Let $C_1 = C - \ln a$ (since $-\ln a$ is absorbed into the constant):
+
+$$
+\boxed{ \ln \left| x + \sqrt{x^2 - a^2} \right| + C_1 }
+$$
+
+
+
+### Key Steps:
+- **Substitution**: $x = a \sec \theta$ converts $\sqrt{x^2 - a^2}$ to $a \tan \theta$ via $\sec^2 \theta - 1 = \tan^2 \theta$.
+- **Integral of Secant**: Recall that $\int \sec \theta \, d\theta = \ln |\sec \theta + \tan \theta| + C$.
+- **Triangle Geometry**: Used to express $\sec \theta$ and $\tan \theta$ in terms of $x$.
+
+
+
+#### General Formula:
+For $a > 0$,
+
+$$
+\boxed{ \int \frac{dx}{\sqrt{x^2 - a^2}} = \ln \left| x + \sqrt{x^2 - a^2} \right| + C }
+$$
+
+This result is useful for integrals arising in physics and engineering, particularly in problems involving hyperbolic functions or inverse trigonometric substitutions.
+
+## 7. Integration of Rational Functions by Partial Fractions
+
+### 7.1. **When to Use Partial Fractions**
+- **Applicable to**: Integrals of the form $\int \frac{P(x)}{Q(x)} \, dx$ where:
+  - $P(x)$ and $Q(x)$ are polynomials.
+  - Degree of $P(x) <$ Degree of $Q(x)$ *(if not, perform polynomial long division first)*.
+
+### 7.2. **General Method**
+1. **Factor the Denominator** $Q(x)$ into irreducible polynomials:
+   - Linear factors: $(ax + b)$
+   - Quadratic factors: $(ax^2 + bx + c)$ (irreducible if $b^2 - 4ac < 0$)
+   - Repeated factors: $(ax + b)^n$ or $(ax^2 + bx + c)^n$
+
+2. **Decompose into Partial Fractions**:
+   - For **each factor**, assign terms as follows:
+
+   | Factor Type               | Partial Fraction Term(s)                     |
+   |---------------------------|---------------------------------------------|
+   | **Linear** $(ax + b)$     | $\frac{A}{ax + b}$                          |
+   | **Repeated Linear** $(ax + b)^n$ | $\frac{A_1}{ax + b} + \frac{A_2}{(ax + b)^2} + \dots + \frac{A_n}{(ax + b)^n}$ |
+   | **Quadratic** $(ax^2 + bx + c)$ | $\frac{Ax + B}{ax^2 + bx + c}$           |
+   | **Repeated Quadratic** $(ax^2 + bx + c)^n$ | $\frac{A_1x + B_1}{ax^2 + bx + c} + \dots + \frac{A_nx + B_n}{(ax^2 + bx + c)^n}$ |
+
+3. **Solve for Constants** ($A, B, A_i, B_i$):
+   - Multiply both sides by $Q(x)$ to clear denominators.
+   - Substitute strategic values of $x$ (usually roots of $Q(x)$).
+   - Equate coefficients of like terms if needed.
+
+4. **Integrate Each Term**:
+   - Linear terms: $\int \frac{A}{ax + b} \, dx = \frac{A}{a} \ln |ax + b| + C$
+   - Quadratic terms: Complete the square or use substitution.
+
+### 7.3. **Example Workflow**
+#### Example 1: $\int \frac{3x + 5}{(x-1)(x^2 + 1)} \, dx$
+1. **Decompose**:
+
+$$
+\frac{3x + 5}{(x-1)(x^2 + 1)} = \frac{A}{x-1} + \frac{Bx + C}{x^2 + 1}
+$$
+
+2. **Clear Denominators**:
+
+$$
+3x + 5 = A(x^2 + 1) + (Bx + C)(x - 1)
+$$
+
+3. **Solve for Constants**:
+   - Let $x = 1 \Rightarrow 8 = 2A \Rightarrow A = 4$.
+   - Compare coefficients:
+     - $x^2$ terms: $0 = A + B \Rightarrow B = -4$.
+     - $x$ terms: $3 = -B + C \Rightarrow C = -1$.
+4. **Integrate**:
+
+$$
+\int \left( \frac{4}{x-1} + \frac{-4x - 1}{x^2 + 1} \right) dx = 4 \ln |x-1| - 2 \ln (x^2 + 1) - \tan^{-1} x + C
+$$
+
+### 7.4. **Special Cases**
+- **Repeated Factors**:  
+  For $(x-2)^3$, use $\frac{A}{x-2} + \frac{B}{(x-2)^2} + \frac{C}{(x-2)^3}$.
+- **Improper Fractions**:  
+  If $\deg(P) \geq \deg(Q)$, perform polynomial long division first:
+
+$$
+\frac{x^3}{x^2 + 1} = x - \frac{x}{x^2 + 1}
+$$
+
+#### Example 2: Find $\int \frac{x^4 - 2x^2 + 4x + 1}{x^3 - x^2 - x + 1} \, dx$
+
+**Step 1: Polynomial Long Division**  
+Since the degree of the numerator (4) > denominator (3), we divide:
+
+$$
+\frac{x^4 - 2x^2 + 4x + 1}{x^3 - x^2 - x + 1} = x + 1 + \frac{4x}{x^3 - x^2 - x + 1}
+$$
+
+**Step 2: Factor the Denominator**  
+Test $x=1$: $Q(1) = 0$ ⇒ $(x-1)$ is a factor:
+
+$$
+x^3 - x^2 - x + 1 = (x-1)(x^2-1) = (x-1)^2(x+1)
+$$
+
+**Step 3: Partial Fraction Decomposition**  
+For the remaining fraction $\frac{4x}{(x-1)^2(x+1)}$:
+
+$$
+\frac{4x}{(x-1)^2(x+1)} = \frac{A}{x-1} + \frac{B}{(x-1)^2} + \frac{C}{x+1}
+$$
+
+Multiply through by the denominator:
+
+$$
+4x = A(x-1)(x+1) + B(x+1) + C(x-1)^2
+$$
+
+**Step 4: Solve for Constants**  
+*Method 1: Equate coefficients*  
+Expand and match terms:
+
+$$
+4x = (A+C)x^2 + (B-2C)x + (-A+B+C)
+$$
+
+Solve the system:
+
+$$
+\begin{cases}
+A + C = 0 \\
+B - 2C = 4 \\
+-A + B + C = 0
+\end{cases}
+\Rightarrow A=1,\ B=2,\ C=-1
+$$
+
+*Method 2: Strategic substitution*  
+- Set $x=1$: $4(1) = B(2) ⇒ B=2$  
+- Set $x=-1$: $4(-1) = C(4) ⇒ C=-1$  
+- Set $x=0$: $0 = -A + B + C ⇒ A=1$
+
+**Step 5: Integrate**  
+Combine all parts:
+
+$$
+\int \left[ x + 1 + \frac{1}{x-1} + \frac{2}{(x-1)^2} - \frac{1}{x+1} \right] dx
+$$
+
+Compute term-by-term:
+
+$$
+= \frac{x^2}{2} + x + \ln|x-1| - \frac{2}{x-1} - \ln|x+1| + K
+$$
+
+**Final Answer**:
+
+$$
+\boxed{ \frac{x^2}{2} + x - \frac{2}{x-1} + \ln\left| \frac{x-1}{x+1} \right| + K }
+$$
+
+#### Example 3: Evaluate $\int \frac{2x^2 - x + 4}{x^3 + 4x} \, dx$
+
+**Solution**  
+Since $x^3 + 4x = x(x^2 + 4)$ cannot be factored further, we write:
+
+$$
+\frac{2x^2 - x + 4}{x(x^2 + 4)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 4}
+$$
+
+Multiply through by $x(x^2 + 4)$:
+
+$$
+2x^2 - x + 4 = A(x^2 + 4) + (Bx + C)x = (A + B)x^2 + Cx + 4A
+$$
+
+Equate coefficients:
+
+$$
+\begin{cases}
+A + B = 2 \\
+C = -1 \\
+4A = 4
+\end{cases}
+\Rightarrow A = 1,\ B = 1,\ C = -1
+$$
+
+Thus:
+
+$$
+\int \frac{2x^2 - x + 4}{x^3 + 4x} \, dx = \int \left( \frac{1}{x} + \frac{x - 1}{x^2 + 4} \right) dx
+$$
+
+Split the second term:
+
+$$
+\int \frac{x - 1}{x^2 + 4} dx = \int \frac{x}{x^2 + 4} dx - \int \frac{1}{x^2 + 4} dx
+$$
+
+Compute each part:
+1. For $\int \frac{x}{x^2 + 4} dx$, let $u = x^2 + 4 \Rightarrow du = 2x \, dx$:
+
+$$
+\frac{1}{2} \ln|x^2 + 4| + C_1
+$$
+
+2. For $\int \frac{1}{x^2 + 4} dx$, use $\int \frac{1}{x^2 + a^2} dx = \frac{1}{a} \tan^{-1}\left(\frac{x}{a}\right)$:
+
+$$
+\frac{1}{2} \tan^{-1}\left(\frac{x}{2}\right) + C_2
+$$
+
+**Final Answer**:
+
+$$
+\boxed{ \ln|x| + \frac{1}{2} \ln(x^2 + 4) - \frac{1}{2} \tan^{-1}\left(\frac{x}{2}\right) + K }
+$$
+
+
+#### Example 4: Evaluate $\int \frac{4x^2 - 3x + 2}{4x^2 - 4x + 3} \, dx$
+
+**Solution**  
+Since the numerator's degree $\geq$ denominator's degree, perform polynomial division:
+
+$$
+\frac{4x^2 - 3x + 2}{4x^2 - 4x + 3} = 1 + \frac{x - 1}{4x^2 - 4x + 3}
+$$
+
+The denominator is irreducible ($b^2 - 4ac = -32 < 0$). Complete the square:
+
+$$
+4x^2 - 4x + 3 = (2x - 1)^2 + 2
+$$
+
+Let $u = 2x - 1 \Rightarrow du = 2dx$, and $x = \frac{1}{2}(u + 1)$. Then:
+
+$$
+\int \frac{x - 1}{4x^2 - 4x + 3} dx = \frac{1}{2} \int \frac{\frac{1}{2}(u + 1) - 1}{u^2 + 2} du = \frac{1}{4} \int \frac{u - 1}{u^2 + 2} du
+$$
+
+Split the integral:
+
+$$
+\frac{1}{4} \left( \int \frac{u}{u^2 + 2} du - \int \frac{1}{u^2 + 2} du \right) = \frac{1}{8} \ln(u^2 + 2) - \frac{1}{4\sqrt{2}} \tan^{-1}\left(\frac{u}{\sqrt{2}}\right) + C
+$$
+
+Substitute back $u = 2x - 1$:
+
+$$
+\int \frac{4x^2 - 3x + 2}{4x^2 - 4x + 3} dx = x + \frac{1}{8} \ln(4x^2 - 4x + 3) - \frac{1}{4\sqrt{2}} \tan^{-1}\left(\frac{2x - 1}{\sqrt{2}}\right) + C
+$$
+
+**Final Answer**:
+
+$$
+\boxed{ x + \frac{1}{8} \ln(4x^2 - 4x + 3) - \frac{\sqrt{2}}{8} \tan^{-1}\left(\frac{2x - 1}{\sqrt{2}}\right) + C }
+$$
+
+
+
+### Key Takeaways:
+1. **Partial Fractions**:
+   - For $\frac{P(x)}{Q(x)}$, factor $Q(x)$ completely.
+   - Use linear numerators for irreducible quadratics (e.g., $\frac{Bx + C}{x^2 + 4}$).
+
+2. **Irreducible Quadratics**:
+   - Complete the square to integrate terms like $\frac{Ax + B}{ax^2 + bx + c}$.
+   - Results often combine logarithms and $\tan^{-1}$.
+
+3. **Polynomial Division**:
+   - Required when $\deg(P) \geq \deg(Q)$.
+
+### 7.5. **Key Tips**
+- Always check if the denominator can be factored further.
+- For quadratic terms, complete the square if needed:
+
+$$
+x^2 + bx + c = \left(x + \frac{b}{2}\right)^2 + \left(c - \frac{b^2}{4}\right)
+$$
+- Remember:
+
+$$
+\int \frac{1}{x^2 + a^2} \, dx = \frac{1}{a} \tan^{-1} \left( \frac{x}{a} \right) + C
+$$
+
+### 7.6. **Common Integrals After Decomposition**
+| Partial Fraction Term      | Integral Result                          |
+|----------------------------|------------------------------------------|
+| $\frac{A}{ax + b}$         |   $\frac{A}{a} \ln\|ax + b\| + C$ |
+| $\frac{A}{(ax + b)^n}$     | $\frac{-A}{a(n-1)(ax + b)^{n-1}} + C$   |
+| $\frac{Ax + B}{x^2 + a^2}$ | $\frac{A}{2} \ln (x^2 + a^2) + \frac{B}{a} \tan^{-1} \left( \frac{x}{a} \right) + C$ |
