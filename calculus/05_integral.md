@@ -1,9 +1,11 @@
 # integral
 ## 1. Definite Integral
 ### 1.1. Definition
+
 $$
 \int_a^b f(x) dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i) \Delta x
 $$
+
 where $\Delta x = \frac{b-a}{n}$ and $x_i = a + i \Delta x$.
 
 The symbol $\int$ was introduced by **Leibniz** and is called an **integral sign**.  
@@ -79,18 +81,21 @@ $$
 
 6.  
 If \( f(x) > 0 \) for \( a < x < b \), then  
+
 $$
 \int_a^b f(x)\,dx > 0
 $$
 
 7.  
 If \( f(x) > t(x) \) for \( a < x < b \), then  
+
 $$
 \int_a^b f(x)\,dx > \int_a^b t(x)\,dx
 $$
 
 8.  
 If \( m < f(x) < M \) for \( a < x < b \), then  
+
 $$
 m(b - a) < \int_a^b f(x)\,dx < M(b - a)
 $$
@@ -571,11 +576,13 @@ $$
 **Example 1** Evaluate $\int_0^4 \sqrt{2x + 1} \, dx$ using substitution.
 
 **Solution** Using the substitution from Solution 1 of Example 2, we have:
+
 $$
 u = 2x + 1 \quad \text{and} \quad dx = \frac{1}{2} du
 $$
 
 To find the new limits of integration:
+
 $$
 \begin{aligned}
 \text{When } x &= 0, \quad u = 2(0) + 1 = 1 \\
@@ -584,6 +591,7 @@ $$
 $$
 
 Therefore:
+
 $$
 \begin{aligned}
 \int_0^4 \sqrt{2x + 1} \, dx &= \int_1^9 \frac{1}{2} \sqrt{u} \, du \\
@@ -906,15 +914,41 @@ $$
 **Solution**  
 If we separate one $\sec^2 x$ factor, we can express the remaining $\sec^2 x$ factor in terms of tangent using the identity $\sec^2 x = 1 + \tan^2 x$. We then substitute $u = \tan x$ with $du = \sec^2 x \, dx$:
 
+We compute:
+
 $$
-\begin{aligned}
-\int \tan^6 x \sec^4 x \, dx &= \int \tan^6 x \sec^2 x \cdot \sec^2 x \, dx \\
-&= \int \tan^6 x (1 + \tan^2 x) \sec^2 x \, dx \\
-&= \int u^6 (1 + u^2) \, du \quad \text{(where \( u = \tan x \))} \\
-&= \int (u^6 + u^8) \, du \\
-&= \frac{u^7}{7} + \frac{u^9}{9} + C \\
-&= \frac{1}{7} \tan^7 x + \frac{1}{9} \tan^9 x + C
-\end{aligned}
+\int \tan^6 x \cdot \sec^4 x \, dx
+$$
+
+First, split one $\sec^2 x$ off:
+
+$$
+= \int \tan^6 x \cdot \sec^2 x \cdot \sec^2 x \, dx
+$$
+
+Now use the identity $\sec^2 x = 1 + \tan^2 x$:
+
+$$
+= \int \tan^6 x (1 + \tan^2 x) \cdot \sec^2 x \, dx
+$$
+
+Let $u = \tan x$, so $du = \sec^2 x \, dx$:
+
+$$
+= \int u^6 (1 + u^2) \, du
+= \int (u^6 + u^8) \, du
+$$
+
+Now integrate:
+
+$$
+= \frac{u^7}{7} + \frac{u^9}{9} + C
+$$
+
+Substitute back $u = \tan x$:
+
+$$
+= \frac{1}{7} \tan^7 x + \frac{1}{9} \tan^9 x + C
 $$
 
 **Final Answer**:  
@@ -1002,15 +1036,17 @@ $$
 #### **Examples**
 ##### Example 3 (Case a): $\int \tan^6 x \sec^4 x \, dx$
 - $n=4$ (even), so save $\sec^2 x$:
-  $$
-  \int \tan^6 x (1 + \tan^2 x) \sec^2 x \, dx \xrightarrow{u=\tan x} \int u^6 (1 + u^2) \, du
-  $$
+
+$$
+\int \tan^6 x (1 + \tan^2 x) \sec^2 x \, dx \xrightarrow{u=\tan x} \int u^6 (1 + u^2) \, du
+$$
 
 ##### Example 4 (Case b): $\int \tan^5 \theta \sec^7 \theta \, d\theta$
 - $m=5$ (odd), so save $\sec \theta \tan \theta$:
-  $$
-  \int (\sec^2 \theta - 1)^2 \sec^6 \theta \cdot (\sec \theta \tan \theta \, d\theta) \xrightarrow{u=\sec \theta} \int (u^2 - 1)^2 u^6 \, du
-  $$
+
+$$
+\int (\sec^2 \theta - 1)^2 \sec^6 \theta \cdot (\sec \theta \tan \theta \, d\theta) \xrightarrow{u=\sec \theta} \int (u^2 - 1)^2 u^6 \, du
+$$
 
 
 #### **Key Notes**
@@ -1098,6 +1134,7 @@ $$
 
 **Solution**  
 We rewrite $\tan^2 x$ using the identity $\tan^2 x = \sec^2 x - 1$:
+
 $$
 \begin{aligned}
 \int \tan^3 x \, dx &= \int \tan x \cdot \tan^2 x \, dx \\
@@ -1108,16 +1145,19 @@ $$
 
 Now evaluate each integral separately:
 1. For $\int \tan x \sec^2 x \, dx$, let $u = \tan x \Rightarrow du = \sec^2 x \, dx$:
-   $$
-   \int \tan x \sec^2 x \, dx = \int u \, du = \frac{u^2}{2} + C_1 = \frac{\tan^2 x}{2} + C_1
-   $$
+
+$$
+\int \tan x \sec^2 x \, dx = \int u \, du = \frac{u^2}{2} + C_1 = \frac{\tan^2 x}{2} + C_1
+$$
 
 2. For $\int \tan x \, dx$, recall the standard result:
-   $$
-   \int \tan x \, dx = -\ln |\cos x| + C_2 = \ln |\sec x| + C_2
-   $$
+
+$$
+\int \tan x \, dx = -\ln |\cos x| + C_2 = \ln |\sec x| + C_2
+$$
 
 **Final Answer**:
+
 $$
 \boxed{\frac{\tan^2 x}{2} - \ln |\sec x| + C}
 $$
