@@ -1,7 +1,7 @@
 # A beginner's guide to Calculus
 ## referencing the book: *CALCULUS Early Transcendentals Eighth Edition* ，by James steward.
 
-This repository is a structured collection of study notes and visual aids for learning integral calculus. It is designed to complement the textbook CALCULUS: Early Transcendentals by James Stewart, providing a clear pathway through the fundamental concepts of calculus with supporting visualizations and examples.
+This repository is a structured collection of study notes and visual aids for learning integral calculus. It is designed to summarize the textbook CALCULUS: Early Transcendentals by James Stewart, providing a clear pathway through the fundamental concepts of calculus with supporting visualizations and examples.
 
 ### Content Overview
 1. Algebra Review
