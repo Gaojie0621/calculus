@@ -5,9 +5,11 @@ A **differential equation (DE)** is an equation that relates an unknown function
 
 ### General Form
 An **n-th order ordinary differential equation (ODE)** is expressed as:
+
 $$
 F\left(x, y, \frac{dy}{dx}, \frac{d^2y}{dx^2}, \dots, \frac{d^ny}{dx^n}\right) = 0
 $$
+
 where:
 - \( y = y(x) \) is the unknown function.
 - \( \frac{d^ky}{dx^k} \) represents its \( k \)-th derivative.
