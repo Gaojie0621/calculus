@@ -559,6 +559,7 @@ $$ f(x) = \begin{cases}
 Here $f(2) = 1$ is defined, and  
 
 $$ \lim_{x \to 2} f(x) = \lim_{x \to 2} \frac{x^2 - x - 2}{x - 2} = \lim_{x \to 2} \frac{(x - 2)(x + 1)}{x - 2} = \lim_{x \to 2} (x + 1) = 3 $$  
+
 exists. However,  
 
 $$ \lim_{x \to 2} f(x) \neq f(2) $$  
