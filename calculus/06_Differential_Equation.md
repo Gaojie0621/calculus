@@ -11,27 +11,27 @@ F\left(x, y, \frac{dy}{dx}, \frac{d^2y}{dx^2}, \dots, \frac{d^ny}{dx^n}\right) =
 $$
 
 where:
-- \( y = y(x) \) is the unknown function.
-- \( \frac{d^ky}{dx^k} \) represents its \( k \)-th derivative.
+- $y = y(x)$ is the unknown function.
+- $\frac{d^ky}{dx^k}$ represents its $k$-th derivative.
 
 ## 2. Classification of Differential Equations
 
 ### 2.1 By Type
 | Type                | Description                                                                 | Example                          |
 |---------------------|-----------------------------------------------------------------------------|----------------------------------|
-| **Ordinary DE (ODE)** | Contains derivatives with respect to **one** independent variable.          | \( \frac{dy}{dx} + 2y = e^x \)  |
-| **Partial DE (PDE)**  | Contains partial derivatives with respect to **multiple** variables.        | \( \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} \) (Heat Equation) |
+| **Ordinary DE (ODE)** | Contains derivatives with respect to **one** independent variable.          | $\frac{dy}{dx} + 2y = e^x$  |
+| **Partial DE (PDE)**  | Contains partial derivatives with respect to **multiple** variables.        | $\frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}$ (Heat Equation) |
 
 ### 2.2 By Linearity
 | Type          | Criteria                                                                 | Example                          |
 |---------------|--------------------------------------------------------------------------|----------------------------------|
-| **Linear**    | The unknown function and its derivatives appear linearly (no powers/products). | \( y'' + p(x)y' + q(x)y = r(x) \) |
-| **Nonlinear** | Contains nonlinear terms (e.g., \( y^2 \), \( \sin(y) \), \( y \cdot y' \)). | \( y'' + y^3 = 0 \)              |
+| **Linear**    | The unknown function and its derivatives appear linearly (no powers/products). | $y'' + p(x)y' + q(x)y = r(x)$ |
+| **Nonlinear** | Contains nonlinear terms (e.g., $y^2$, $\sin(y)$, $y \cdot y'$). | $y'' + y^3 = 0$              |
 
 ### 2.3 By Order
 The **order** is the highest derivative present:
-- **First-order**: \( \frac{dy}{dx} = f(x, y) \)
-- **Second-order**: \( \frac{d^2y}{dx^2} + p(x)\frac{dy}{dx} = q(x) \)
+- **First-order**: $\frac{dy}{dx} = f(x, y)$
+- **Second-order**: $\frac{d^2y}{dx^2} + p(x)\frac{dy}{dx} = q(x)$
 
 ---
 
@@ -40,14 +40,14 @@ The **order** is the highest derivative present:
 ### 3.1 Types of Solutions
 | Solution Type   | Description                                                                 | Example                          |
 |-----------------|-----------------------------------------------------------------------------|----------------------------------|
-| **General Solution** | Contains arbitrary constants (equal to the order of the DE).                | \( y = Ce^{-2x} \) (for \( y' + 2y = 0 \)) |
-| **Particular Solution** | Obtained by assigning specific values to constants (via initial/boundary conditions). | If \( y(0) = 3 \), then \( C = 3 \). |
+| **General Solution** | Contains arbitrary constants (equal to the order of the DE).                | $y = Ce^{-2x}$ (for $y' + 2y = 0$) |
+| **Particular Solution** | Obtained by assigning specific values to constants (via initial/boundary conditions). | If $y(0) = 3$, then $C = 3$. |
 | **Singular Solution**  | Solutions not obtainable from the general solution (rare).                  | Clairaut’s equation cases.       |
 
 ### 3.2 Existence and Uniqueness
-For a first-order ODE \( y' = f(x, y) \) with initial condition \( y(x_0) = y_0 \):
-- **Existence**: If \( f(x, y) \) is continuous near \( (x_0, y_0) \), a solution exists.
-- **Uniqueness**: If \( f \) is Lipschitz in \( y \), the solution is unique.
+For a first-order ODE $y' = f(x, y)$ with initial condition $y(x_0) = y_0$:
+- **Existence**: If $f(x, y)$ is continuous near $(x_0, y_0)$, a solution exists.
+- **Uniqueness**: If $f$ is Lipschitz in $y$, the solution is unique.
 
 
 
@@ -55,7 +55,7 @@ For a first-order ODE \( y' = f(x, y) \) with initial condition \( y(x_0) = y_0 
 
 ### 4.1 First-Order ODEs
 #### (a) Separable Equations
-Form: \( \frac{dy}{dx} = f(x)g(y) \).  
+Form: $\frac{dy}{dx} = f(x)g(y)$.  
 **Solution**: Separate and integrate:
 $$
 \int \frac{dy}{g(y)} = \int f(x) \, dx + C
@@ -67,7 +67,7 @@ $$
 $$
 
 #### (b) Linear Equations
-Form: \( \frac{dy}{dx} + P(x)y = Q(x) \).  
+Form: $\frac{dy}{dx} + P(x)y = Q(x)$.  
 **Solution**: Use an **integrating factor（积分因子）** $\mu(x) = e^{\int P(x) dx}$:
 
 ##### Integrating Factor Method for First-Order Linear ODEs
@@ -323,8 +323,10 @@ $$
 Simplifies to:
 
 $$
-u'(x)e^{-\int P(x)dx} = Q(x) \\
-\Rightarrow u'(x) = Q(x)e^{\int P(x)dx}
+\begin{aligned}
+u'(x)e^{-\int P(x)dx} &= Q(x) \\
+\Rightarrow u'(x) &= Q(x)e^{\int P(x)dx}
+\end{aligned}
 $$
 
 Integrate to find:
@@ -350,8 +352,10 @@ $$
 **Step 1: Homogeneous Solution**
 
 $$
-\frac{dy}{dx} + 2xy = 0 \\
-\Rightarrow y_h = Ce^{-\int 2xdx} = Ce^{-x^2}
+\begin{aligned}
+&\frac{dy}{dx} + 2xy = 0 \\
+\Rightarrow\ &y_h = Ce^{-\int 2x\,dx} = Ce^{-x^2}
+\end{aligned}
 $$
 
 **Step 2: Particular Solution Form**
@@ -364,9 +368,11 @@ $$
 Substitute into original equation:
 
 $$
-u'(x)e^{-x^2} = x \\
-\Rightarrow u'(x) = xe^{x^2} \\
-\Rightarrow u(x) = \frac{1}{2}e^{x^2} + C
+\begin{aligned}
+&u'(x)e^{-x^2} = x \\
+\Rightarrow\ &u'(x) = xe^{x^2} \\
+\Rightarrow\ &u(x) = \frac{1}{2}e^{x^2} + C
+\end{aligned}
 $$
 
 **Step 4: Final Solution**
@@ -378,13 +384,13 @@ $$
 
 
 #### (c) Exact Equations
-Form: \( M(x,y)dx + N(x,y)dy = 0 \), where \( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \).  
-**Solution**: Find a potential function \( \psi(x,y) \) such that:
+Form: $M(x,y)dx + N(x,y)dy = 0$, where $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$.  
+**Solution**: Find a potential function $\psi(x,y)$ such that:
 $$
 \frac{\partial \psi}{\partial x} = M, \quad \frac{\partial \psi}{\partial y} = N
 $$
 
-#### (D) Homogeneous Differential Equations
+#### (d) Homogeneous Differential Equations
 ##### 1. Definition and Identification
 A **homogeneous differential equation** has the form:
 
@@ -431,7 +437,7 @@ $$\int \frac{1}{f(v) - v} dv = \int \frac{1}{x} dx + C$$
 ##### Solution:
 1. **Rewrite in Homogeneous Form**:
 
-$$\frac{dy}{dx} = \frac{y}{x} + \frac{x}{y} = v + \frac{1}{v} \quad \text{(where $v = y/x$)}$$
+$$\frac{dy}{dx} = \frac{y}{x} + \frac{x}{y} = v + \frac{1}{v} \quad \text{(where } v = y/x\text{)}$$
 
 2. **Apply Substitution**:
 
@@ -468,10 +474,12 @@ where the lines intersect.
 **Procedure**:
 1. Find intersection point $(x_0,y_0)$ by solving:
 
-$$\begin{cases}
+$$
+\begin{cases}
 a_1x + b_1y + c_1 = 0 \\
 a_2x + b_2y + c_2 = 0
-\end{cases}$$
+\end{cases}
+$$
 
 2. Make substitution:
 
@@ -482,6 +490,7 @@ $$u = x - x_0, \quad v = y - y_0$$
 **Example**:
 
 $$\frac{dy}{dx} = \frac{2y-x+5}{2x-y-4}$$
+
 - Intersection at $(1,-2)$
 - Substitution: $u=x-1$, $v=y+2$
 - Transformed equation:
@@ -595,7 +604,7 @@ $$
 - $Q(x) = x^2$
 - $n = 3$
 
-Let $v = y^{-2}$ ⇒ $\frac{dv}{dx} = -2y^{-3}\frac{dy}{dx}$
+Let $v = y^{-2} \Rightarrow \frac{dv}{dx} = -2y^{-3}\frac{dy}{dx}$
 
 Multiply by $-2y^{-3}$:
 
@@ -723,13 +732,14 @@ y'' - 3y' + 2y = e^x
 $$
 
 - Step 1: Solve the homogeneous equation $y'' - 3y' + 2y = 0$  
-  ⇒ $y_h = C_1 e^x + C_2 e^{2x}$
+  $\Rightarrow y_h = C_1 e^x + C_2 e^{2x}$
 
-- Step 2: Guess particular solution: $y_p = A x e^x$  
-  ⇒ Plug into original equation and solve for $A$
+- Step 2: Since $e^x$ already solves the homogeneous equation, guess $y_p = A x e^x$.  
+  Then $y_p' = A(x+1)e^x$ and $y_p'' = A(x+2)e^x$. Plugging in:  
+  $A\left[(x+2) - 3(x+1) + 2x\right]e^x = -Ae^x = e^x \Rightarrow A = -1$
 
 - Final general solution:  
 
 $$
-y = C_1 e^x + C_2 e^{2x} + A x e^x
+y = C_1 e^x + C_2 e^{2x} - x e^x
 $$

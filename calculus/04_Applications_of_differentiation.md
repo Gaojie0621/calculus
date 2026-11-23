@@ -6,20 +6,20 @@
 - A function $f$ has an **absolute minimum** value at $c$ if $f(c) \leq f(x)$ for all $x$ in the domain of $f$.
 
 **Definition 2**:
-The number **f(c)** is a:  
-- **local maximum value** of *f* if **f(c) > f(x)** when *x* is near *c*.  
-- **local minimum value** of *f* if **f(c) < f(x)** when *x* is near *c*.  
+The number $f(c)$ is a:  
+- **local maximum value** of $f$ if $f(c) \geq f(x)$ when $x$ is near $c$.  
+- **local minimum value** of $f$ if $f(c) \leq f(x)$ when $x$ is near $c$.  
 
 <img src="images/max_min.png">
 
 #### The Extreme Value Theorem  
-If *f* is **continuous** on a **closed interval** [*a, b*], then *f* attains:  
-- an **absolute maximum value** *f(c)*,  
-- an **absolute minimum value** *f(d)*,  
-for some numbers *c* and *d* in [*a, b*].  
+If $f$ is **continuous** on a **closed interval** $[a, b]$, then $f$ attains:  
+- an **absolute maximum value** $f(c)$,  
+- an **absolute minimum value** $f(d)$,  
+for some numbers $c$ and $d$ in $[a, b]$.  
 
 #### Fermat’s Theorem  
-If *f* has a **local maximum** or **local minimum** at *c*, and if *f'*(*c*) exists, then:  
+If $f$ has a **local maximum** or **local minimum** at $c$, and if $f'(c)$ exists, then:  
 
 $$f'(c) = 0$$  
 
@@ -30,11 +30,12 @@ Suppose (without loss of generality) that $f$ has a **local maximum** at $c$. Th
 $$ f(c) \geq f(x)\text{ for all } x \text{ sufficiently close to } c$$
 
 For small $h$ (positive or negative):  
-$$f(c) \geq f(c + h) \implies f(c + h) - f(c) \leq 0$$.  
+
+$$f(c) \geq f(c + h) \implies f(c + h) - f(c) \leq 0$$
 
 1. **Right-hand limit ($h \to 0^+$)**:  
 
-$$ \frac{f(c + h) - f(c)}{h} \leq 0 \text{ (since $h > 0$).}$$
+$$ \frac{f(c + h) - f(c)}{h} \leq 0 \quad \text{(since } h > 0\text{)}$$
 
 Taking the limit: 
 
@@ -42,13 +43,13 @@ $$ f'(c) = \lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h} \leq 0$$
 
 2. **Left-hand limit ($h \to 0^-$)**:  
    
-$$ \frac{f(c + h) - f(c)}{h} \geq 0 \text{ (since $h < 0$)}$$
+$$ \frac{f(c + h) - f(c)}{h} \geq 0 \quad \text{(since } h < 0\text{)}$$
 
    Taking the limit:  
 
 $$ f'(c) = \lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h} \geq 0 $$
 
-Since $f'(c) \leq 0$ and $f'(c) \geq 0$, the only possibility is:  $ \boxed{f'(c) = 0} $.
+Since $f'(c) \leq 0$ and $f'(c) \geq 0$, the only possibility is:  $\boxed{f'(c) = 0}$.
 
 #### Critical Number of a Function（临界点）
 
@@ -198,10 +199,10 @@ If $f'(x) = t'(x)$ for all $x$ in an interval $(a, b)$,  then $f - t$ is constan
 that is,
 
 $$
-f(x) = t(x) + c  \quad \text{for some constant $c$.}
+f(x) = t(x) + c  \quad \text{for some constant } c.
 $$
 
-## 4.3 How Derivatives Afect the Shape of a Graph
+## 4.3 How Derivatives Affect the Shape of a Graph
 
 ### 4.3.1 📈 Increasing/Decreasing Test
 
@@ -476,15 +477,15 @@ Several indeterminate forms arise from the limit:
 
 $$\lim_{x \to a} f(x)^{g(x)}$$
 
-1. $$\lim_{x \to a} f(x) \to 0 \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } 0^0$$
+1. $\lim_{x \to a} f(x) = 0$ and $\lim_{x \to a} g(x) = 0$: type $0^0$
 
-2. $$\lim_{x \to a} f(x) \to \infty \quad \text{and} \quad \lim_{x \to a} g(x) \to 0 \quad \text{type } {\infty}^0$$
+2. $\lim_{x \to a} f(x) = \infty$ and $\lim_{x \to a} g(x) = 0$: type $\infty^0$
 
-3. $$\lim_{x \to a} f(x) \to 1 \quad \text{and} \quad \lim_{x \to a} g(x) \to \infty \quad \text{type } 1^{\infty}$$
+3. $\lim_{x \to a} f(x) = 1$ and $\lim_{x \to a} g(x) = \pm\infty$: type $1^{\infty}$
 
 Each of these three cases can be treated either by taking the natural logarithm:
 
-Let $$y = f(x)^{g(x)}, \quad \text{then} \quad \ln y = g(x) \ln f(x)$$
+Let $y = f(x)^{g(x)}$, then $\ln y = g(x) \ln f(x)$
 
 or by writing the function as an exponential:
 
@@ -679,7 +680,7 @@ No symmetry: $f(-x) \ne f(x)$ and $f(-x) \ne -f(x)$.
 
 **D. Asymptotes**  
 - As $x \to \infty$, $xe^x \to \infty$.
-- As $x \to -\infty$, $xe^x$ is an indeterminate form ($0 \cdot -\infty$), so apply L'Hospital’s Rule:
+- As $x \to -\infty$, $xe^x$ is an indeterminate form ($0 \cdot (-\infty)$), so apply L'Hospital’s Rule:
 
 $$
 \lim_{x \to -\infty} xe^x = \lim_{x \to -\infty} \frac{x}{e^{-x}} = \lim_{x \to -\infty} \frac{1}{-e^{-x}} = 0

@@ -109,7 +109,7 @@ $$
 \end{aligned}
 $$
 
-*Hint:
+*Hint:*
 
 $$
 \sin x = \sin\left(\frac{x+y}{2} + \frac{x-y}{2}\right), \quad
@@ -142,11 +142,11 @@ Let  $c$  be a constant and $n$  a positive integer. Then:
 
 $$
 \begin{aligned}
-\sum_{i=1}^{n} 1 = n \\
-\sum_{i=1}^{n} c = nc \\
-\sum_{i=1}^{n} i = \frac{n(n + 1)}{2} \\
-\sum_{i=1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6} \\
-\sum_{i=1}^{n} i^3 = \left( \frac{n(n + 1)}{2} \right)^2
+\sum_{i=1}^{n} 1 &= n \\
+\sum_{i=1}^{n} c &= nc \\
+\sum_{i=1}^{n} i &= \frac{n(n + 1)}{2} \\
+\sum_{i=1}^{n} i^2 &= \frac{n(n + 1)(2n + 1)}{6} \\
+\sum_{i=1}^{n} i^3 &= \left( \frac{n(n + 1)}{2} \right)^2
 \end{aligned}
 $$
 
@@ -164,13 +164,13 @@ Right-hand side (RHS):  $\left( \frac{1(1 + 1)}{2} \right)^2 = \left( \frac{2}{2
 
  **Step 2: Inductive Hypothesis**
 
-Assume that the formula holds for \( n = k \), i.e.,
+Assume that the formula holds for $n = k$, i.e.,
 
 $$
 \sum_{i=1}^{k} i^3 = \left( \frac{k(k + 1)}{2} \right)^2
 $$
 
-We need to prove that it also holds for \( n = k + 1 \), i.e.,
+We need to prove that it also holds for $n = k + 1$, i.e.,
 
 $$
 \sum_{i=1}^{k+1} i^3 = \left( \frac{(k+1)(k+2)}{2} \right)^2
@@ -201,7 +201,7 @@ $$
 \sum_{i=1}^{k+1} i^3 = \left( \frac{(k + 1)(k + 2)}{2} \right)^2
 $$
 
-✅ This matches the desired formula for \( n = k + 1 \).
+✅ This matches the desired formula for $n = k + 1$.
 
 **By the principle of mathematical induction, the identity**
 
@@ -263,7 +263,7 @@ $$
   $$\pm1, \pm2, \pm3, \pm6, \pm\frac{1}{2}, \pm\frac{3}{2}$$
 
 **Test roots:**
-Assume we find \( x = 2 \) is a root.  
+Assume we find $x = 2$ is a root.  
 Then use **polynomial division** to factor:  
 $$P(x) = (x - 2)(2x^2 + x - 3)$$
 
@@ -350,9 +350,9 @@ $$P(-x) = -x^3 - 4x^2 - 5x - 2$$
 
 - **Limits & Asymptotic Behavior**:  
   Let $P(x)$ and $Q(x)$ be polynomials. As $x \to \infty$:  
-  - If $\\deg(P) < \\deg(Q)$: $\lim \frac{P(x)}{Q(x)} = 0$  
-  - If $\\deg(P) = \\deg(Q)$: limit is the ratio of leading coefficients  
-  - If $\\deg(P) > \\deg(Q)$: $\lim \frac{P(x)}{Q(x)} = \infty$ or DNE (slant asymptote may exist)
+  - If $\deg(P) < \deg(Q)$: $\lim \frac{P(x)}{Q(x)} = 0$  
+  - If $\deg(P) = \deg(Q)$: limit is the ratio of leading coefficients  
+  - If $\deg(P) > \deg(Q)$: $\lim \frac{P(x)}{Q(x)} = \infty$ or DNE (slant asymptote may exist)
 
 ---
 
@@ -490,7 +490,7 @@ A function f is called a ***one-to-one function*** if it never takes on
 the same value twice; that is:
 
 $$
-f(x_{1}) = f(x_{2}) \quad whenever \quad x_{1} = x_{2}
+f(x_{1}) \neq f(x_{2}) \quad \text{whenever} \quad x_{1} \neq x_{2}
 $$
 
 
@@ -519,7 +519,7 @@ for any $y \in B$.
 ##### How to Find the Inverse Function of a One-to-One Function $f$
 
 **Step 1**: Write the equation 
-\(y = f(x)\)
+$y = f(x)$
 
 **Step 2**: Solve this equation for $x$ in terms of $y$ (if possible): $\boxed{f(y) = x}$
 
@@ -593,10 +593,10 @@ If $x$ and $y$ are **positive numbers**, and $r$ is any **real number**, then:
 
 
 - **The inverse cosecant function:**
-  $$y = \csc^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \csc(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]$$
+  $$y = \csc^{-1}(x) \quad (|x| \geq 1) \quad \Leftrightarrow \quad \csc(y) = x, \quad y \in \left[-\frac{\pi}{2}, 0\right) \cup \left(0, \frac{\pi}{2}\right]$$
 
 - **The inverse secant function:**
-  $$y = \sec^{-1}(x) \quad (|x| > 1) \quad \Leftrightarrow \quad \sec(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]$$
+  $$y = \sec^{-1}(x) \quad (|x| \geq 1) \quad \Leftrightarrow \quad \sec(y) = x, \quad y \in \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right]$$
 
 - **The inverse cotangent function:**
   $$y = \cot^{-1}(x) \quad (x \in \mathbb{R}) \quad \Leftrightarrow \quad \cot(y) = x, \quad y \in (0, \pi)$$

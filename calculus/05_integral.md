@@ -45,7 +45,7 @@ The procedure of calculating an integral is called **integration**.
 ### 1.2 Properties of the Definite Integral
 
 $$
-\boxed{\int_a^b f(x)\,dx = 2 \int_a^b f(x)\,dx}
+\boxed{\int_b^a f(x)\,dx = -\int_a^b f(x)\,dx}
 $$
 
 1.  
@@ -80,21 +80,21 @@ $$
 ### Comparison Properties of the Integral
 
 6.  
-If \( f(x) > 0 \) for \( a < x < b \), then  
+If $f(x) > 0$ for $a < x < b$, then  
 
 $$
 \int_a^b f(x)\,dx > 0
 $$
 
 7.  
-If \( f(x) > t(x) \) for \( a < x < b \), then  
+If $f(x) > t(x)$ for $a < x < b$, then  
 
 $$
 \int_a^b f(x)\,dx > \int_a^b t(x)\,dx
 $$
 
 8.  
-If \( m < f(x) < M \) for \( a < x < b \), then  
+If $m < f(x) < M$ for $a < x < b$, then  
 
 $$
 m(b - a) < \int_a^b f(x)\,dx < M(b - a)
@@ -144,19 +144,19 @@ $f(u) = \min f(t)$ and $f(v) = \max f(t)$ on that interval.
 By the comparison property of integrals: 
 
 $$
-f(u) \cdot h < \int_x^{x+h} f(t)\,dt < f(v) \cdot h
+f(u) \cdot h \leq \int_x^{x+h} f(t)\,dt \leq f(v) \cdot h
 $$  
 
 Dividing by $h$:  
 
 $$
-f(u) < \frac{1}{h} \int_x^{x+h} f(t)\,dt < f(v)
+f(u) \leq \frac{1}{h} \int_x^{x+h} f(t)\,dt \leq f(v)
 $$  
 
 So:  
 
 $$
-f(u) < \frac{t(x + h) - t(x)}{h} < f(v)
+f(u) \leq \frac{t(x + h) - t(x)}{h} \leq f(v)
 $$
 
 As $h \to 0$, both $u \to x$ and $v \to x$. Since $f$ is continuous at $x$,  
@@ -731,15 +731,17 @@ which matches the integrand, confirming correctness.
 Let:
 
 $$
-u = x \quad \Rightarrow \quad du = dx \\
-dv = \sin x \, dx \quad \Rightarrow \quad v = -\cos x
+\begin{aligned}
+u &= x \quad \Rightarrow \quad du = dx \\
+dv &= \sin x \, dx \quad \Rightarrow \quad v = -\cos x
+\end{aligned}
 $$
 
 Then:
 
 $$
 \begin{aligned}
-\int x \sin x , dx &= uv - \int v \, du \\
+\int x \sin x \, dx &= uv - \int v \, du \\
 &= x(-\cos x) - \int (-\cos x) \, dx \\
 &= -x \cos x + \int \cos x \, dx \\
 &= -x \cos x + \sin x + C
@@ -765,8 +767,10 @@ $$
 Let:
 
 $$
-u = \tan^{-1} x \quad \Rightarrow \quad du = \frac{dx}{1 + x^2} \\
-dv = dx \quad \Rightarrow \quad v = x
+\begin{aligned}
+u &= \tan^{-1} x \quad \Rightarrow \quad du = \frac{dx}{1 + x^2} \\
+dv &= dx \quad \Rightarrow \quad v = x
+\end{aligned}
 $$
 
 Using integration by parts:
@@ -1169,8 +1173,10 @@ $$
 We use integration by parts with:
 
 $$
-u = \sec x \quad \Rightarrow \quad du = \sec x \tan x \, dx \\
-dv = \sec^2 x \, dx \quad \Rightarrow \quad v = \tan x
+\begin{aligned}
+u &= \sec x \quad \Rightarrow \quad du = \sec x \tan x \, dx \\
+dv &= \sec^2 x \, dx \quad \Rightarrow \quad v = \tan x
+\end{aligned}
 $$
 
 Applying integration by parts:
@@ -1186,8 +1192,10 @@ $$
 Now solve for $\int \sec^3 x \, dx$:
 
 $$
-2 \int \sec^3 x \, dx = \sec x \tan x + \int \sec x \, dx \\
-\int \sec^3 x \, dx = \frac{1}{2} \left( \sec x \tan x + \ln |\sec x + \tan x| \right) + C
+\begin{aligned}
+2 \int \sec^3 x \, dx &= \sec x \tan x + \int \sec x \, dx \\
+\int \sec^3 x \, dx &= \frac{1}{2} \left( \sec x \tan x + \ln |\sec x + \tan x| \right) + C
+\end{aligned}
 $$
 
 **Final Answer**:
@@ -1537,9 +1545,9 @@ B - 2C = 4 \\
 $$
 
 *Method 2: Strategic substitution*  
-- Set $x=1$: $4(1) = B(2) ⇒ B=2$  
-- Set $x=-1$: $4(-1) = C(4) ⇒ C=-1$  
-- Set $x=0$: $0 = -A + B + C ⇒ A=1$
+- Set $x=1$: $4(1) = B(2) \Rightarrow B=2$  
+- Set $x=-1$: $4(-1) = C(4) \Rightarrow C=-1$  
+- Set $x=0$: $0 = -A + B + C \Rightarrow A=1$
 
 **Step 5: Integrate**  
 Combine all parts:
@@ -1687,6 +1695,6 @@ $$
 ### 7.6. **Common Integrals After Decomposition**
 | Partial Fraction Term      | Integral Result                          |
 |----------------------------|------------------------------------------|
-| $\frac{A}{ax + b}$         |   $\frac{A}{a} \ln\|ax + b\| + C$ |
+| $\frac{A}{ax + b}$         |   $\frac{A}{a} \ln\lvert ax + b\rvert + C$ |
 | $\frac{A}{(ax + b)^n}$     | $\frac{-A}{a(n-1)(ax + b)^{n-1}} + C$   |
 | $\frac{Ax + B}{x^2 + a^2}$ | $\frac{A}{2} \ln (x^2 + a^2) + \frac{B}{a} \tan^{-1} \left( \frac{x}{a} \right) + C$ |

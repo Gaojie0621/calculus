@@ -476,7 +476,7 @@ $$
 \text{If } a < x < a + \delta \text{, then } |f(x) - L| < \epsilon
 $$
 
-#### 2.3.4 Presice definition of an infinite limit
+#### 2.3.4 Precise definition of an infinite limit
 ##### i. Positive Infinity Limit
 
 $$
@@ -534,10 +534,12 @@ Notice that $f(2)$ is not defined, so $f$ is discontinuous at $x = 2$. Later we'
 
 **(b)** 
 
-$$ f(x) = \begin{cases} 
+$$
+f(x) = \begin{cases}
 \frac{1}{x^2} & \text{if } x \neq 0, \\
-1 & \text{if } x = 0 
-\end{cases} $$
+1 & \text{if } x = 0
+\end{cases}
+$$
 
 **Solution:**  
 Here $f(0) = 1$ is defined, but  
@@ -550,10 +552,12 @@ does not exist (it tends to $+\infty$). Thus, $f$ is discontinuous at $x = 0$.
 
 **(c)** 
 
-$$ f(x) = \begin{cases} 
+$$
+f(x) = \begin{cases}
 \frac{x^2 - x - 2}{x - 2} & \text{if } x \neq 2, \\
-1 & \text{if } x = 2 
-\end{cases} $$
+1 & \text{if } x = 2
+\end{cases}
+$$
 
 **Solution:**  
 Here $f(2) = 1$ is defined, and  
@@ -596,10 +600,10 @@ $$
 
 
 
-#### **Deinition 3**
+#### **Definition 3**
  A function f is **continuous on an interval** if it is continuous at **every number** in the interval. 
  
- If f is deined only on one side of an endpoint of the interval, we understand ***continuous at the endpoint*** to mean ***continuous from the right or continuous from the left***.
+ If f is defined only on one side of an endpoint of the interval, we understand ***continuous at the endpoint*** to mean ***continuous from the right or continuous from the left***.
 
  **Example** Show that the function $f(x) = 1 - \sqrt{1 - x^2}$ is continuous on the interval $[-1, 1]$.
 
@@ -767,7 +771,7 @@ $$
 \lim_{x \to 1} \arcsin\left(\frac{1 - \sqrt{x}}{1 - x}\right)
 $$
 
-**Solution**: Because $\arcsin$ is continuous (by Theorem 7), we can apply Theorem 8 (continuity of composite functions):
+**Solution**: Because $\arcsin$ is continuous (by Theorem 6), we can apply Theorem 7 (continuity of composite functions):
 
 $$
 \begin{align*}
@@ -779,7 +783,7 @@ $$
 \end{align*}
 $$
 
-#### **Theorem 8： Intermediate Value Theorem**  
+#### **Theorem 8: Intermediate Value Theorem**  
 Suppose that $f$ is continuous on the closed interval $[a, b]$ and let $N$ be any number between $f(a)$ and $f(b)$, where $f(a) \neq f(b)$. Then there exists a number $c$ in $(a, b)$ such that:
 
 $$
@@ -1088,13 +1092,13 @@ $$
 
 **Proof Outline:**
 1. Differentiability requires:
-   $\lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a) \text{ exists} $
+   $\lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a) \text{ exists}$
 2. Rewrite the difference quotient:
-   $ f(a+h)-f(a) = h \cdot \frac{f(a+h)-f(a)}{h} $
+   $f(a+h)-f(a) = h \cdot \frac{f(a+h)-f(a)}{h}$
 3. Take limits as $h \to 0$:
-   $\lim_{h \to 0} [f(a+h)-f(a)] = 0 \cdot f'(a) = 0 $
+   $\lim_{h \to 0} [f(a+h)-f(a)] = 0 \cdot f'(a) = 0$
 4. Thus:
-   $\lim_{h \to 0} f(a+h) = f(a) $
+   $\lim_{h \to 0} f(a+h) = f(a)$
    which is exactly the definition of continuity.
 
 #### Important Notes:

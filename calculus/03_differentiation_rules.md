@@ -101,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-*Definition of Number* $e$ : $e = \lim_{h \to 0} \frac{e^h - 1}{h} = 1 $.
+*Definition of the number* $e$: $e$ is the base for which $\lim_{h \to 0} \frac{e^h - 1}{h} = 1$.
 
 **Using Taylor Series:**
 
@@ -241,49 +241,49 @@ $$
 
 We need two key trigonometric limits:
 
-1. **Limit of $\frac{\sin θ}{θ}$**:
+1. **Limit of $\frac{\sin \theta}{\theta}$**:
 
 $$
-\lim_{θ \to 0} \frac{\sin θ}{θ} = 1
+\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1
 $$
 
    *Proof*:
    <img src="images/proof_of_tri_derivative.png" height = 400>
-   - For small $θ > 0$, from the unit circle:
+   - For small $\theta > 0$, from the unit circle:
      
 $$
-\sin θ < θ < \tan θ
+\sin \theta < \theta < \tan \theta
 $$
 
-   - Dividing by $\sin θ$:
+   - Dividing by $\sin \theta$:
 
 $$
-1 < \frac{θ}{\sin θ} < \frac{1}{\cos θ}
+1 < \frac{\theta}{\sin \theta} < \frac{1}{\cos \theta}
 $$
 
    - Taking reciprocals:
 
 $$
-\cos θ < \frac{\sin θ}{θ} < 1
+\cos \theta < \frac{\sin \theta}{\theta} < 1
 $$
    - By Squeeze Theorem:
 
 $$
-\lim_{θ \to 0^+} \frac{\sin θ}{θ} = 1
+\lim_{\theta \to 0^+} \frac{\sin \theta}{\theta} = 1
 $$
 
-   - Since $\frac{\sin θ}{θ}$ is even, the two-sided limit exists and equals 1.
+   - Since $\frac{\sin \theta}{\theta}$ is even, the two-sided limit exists and equals 1.
 
-2. **Limit of $\frac{\cos θ - 1}{θ}$**:
+2. **Limit of $\frac{\cos \theta - 1}{\theta}$**:
 
 $$
-\lim_{θ \to 0} \frac{\cos θ - 1}{θ} = 0
+\lim_{\theta \to 0} \frac{\cos \theta - 1}{\theta} = 0
 $$
 
    *Proof*:
 
 $$
-   \lim_{θ \to 0} \frac{\cos θ - 1}{θ} \cdot \frac{\cos θ + 1}{\cos θ + 1} = \lim_{θ \to 0} \frac{-\sin^2 θ}{θ(\cos θ + 1)} = -\lim_{θ \to 0} \frac{\sin θ}{θ} \cdot \frac{\sin θ}{\cos θ + 1} = -1 \cdot 0 = 0
+   \lim_{\theta \to 0} \frac{\cos \theta - 1}{\theta} \cdot \frac{\cos \theta + 1}{\cos \theta + 1} = \lim_{\theta \to 0} \frac{-\sin^2 \theta}{\theta(\cos \theta + 1)} = -\lim_{\theta \to 0} \frac{\sin \theta}{\theta} \cdot \frac{\sin \theta}{\cos \theta + 1} = -1 \cdot 0 = 0
 $$
 
 **Step 5: Complete the derivative calculation**
@@ -385,7 +385,7 @@ Recall that $b = e^{\ln b}$. Therefore:
 
 $$ b^x = \left(e^{\ln b}\right)^x = e^{(\ln b) x} $$
 
-Applying the Chain Rule to differentiate $\frac{d}{dx} (b^x)$S:
+Applying the Chain Rule to differentiate $\frac{d}{dx} (b^x)$:
 
 $$
 \begin{align*}
@@ -400,7 +400,7 @@ Thus, we obtain the formula:
 
 $$ \boxed{ \frac{d}{dx} (b^x) = b^x \ln b } $$
 
-## 3.5 Implicit Diferentiation
+## 3.5 Implicit Differentiation
 ### 3.5.1 Examples
 #### Example 1
 **(a) If $x^2 + y^2 = 25$, find $\frac{dy}{dx}$ .**
@@ -612,6 +612,7 @@ $$ b^y = x $$
 Differentiate both sides implicitly with respect to $x$:
 
 $$ \frac{d}{dx}(b^y) = \frac{d}{dx}(x) $$
+
 $$ b^y \ln b \cdot \frac{dy}{dx} = 1 $$
 
 Solve for $\frac{dy}{dx}$:
@@ -693,7 +694,7 @@ $$
 
 <img src="images/dif_rule_of_log.png">
 
-### 3.6.2 Logarithmic Diferentiation
+### 3.6.2 Logarithmic Differentiation
 
  >The calculation of derivatives of complicated functions involving products, quotients, or powers can often be simplified by taking logarithms.
 
@@ -741,7 +742,7 @@ $$ \boxed{\frac{dy}{dx} = \frac{x^{3/4}\sqrt{x^2 + 1}}{(3x + 2)^5}\left(\frac{3}
 4. Multiplied through by y to isolate dy/dx
 5. Substituted back the original expression for y
 
-**Steps in Logarithmic Diferentiation**
+**Steps in Logarithmic Differentiation**
 1. Take natural logarithms of both sides of an equation $y = f(x)$ and use the Laws
 of Logarithms to simplify.
 2. Differentiate implicitly with respect to $x$.
@@ -768,7 +769,7 @@ $$
 
 1. **Constant Base and Exponent**  
 
-$$ \frac{d}{dx} (b^n) = 0 \quad \text{(where $b$ and $n$ are constants)} $$
+$$ \frac{d}{dx} (b^n) = 0 \quad \text{(where } b \text{ and } n \text{ are constants)} $$
 
 2. **Variable Base, Constant Exponent (Power Rule)**  
 
@@ -791,6 +792,7 @@ $$ \ln y = \ln(x^{\sqrt{x}}) = \sqrt{x} \ln x $$
 2. Differentiate implicitly:
 
 $$ \frac{y'}{y} = \sqrt{x} \cdot \frac{1}{x} + (\ln x) \cdot \frac{1}{2\sqrt{x}} $$
+
 $$ \frac{y'}{y} = \frac{1}{\sqrt{x}} + \frac{\ln x}{2\sqrt{x}} $$
 
 3. Solve for $y'$ and substitute back $y = x^{\sqrt{x}}$:
@@ -805,6 +807,7 @@ $$ x^{\sqrt{x}} = e^{\sqrt{x} \ln x} $$
 2. Differentiate using chain rule:
 
 $$ \frac{d}{dx} \left( e^{\sqrt{x} \ln x} \right) = e^{\sqrt{x} \ln x} \cdot \frac{d}{dx} (\sqrt{x} \ln x) $$
+
 $$ = x^{\sqrt{x}} \left( \frac{2 + \ln x}{2\sqrt{x}} \right) $$
 
 **Final Answer:**
@@ -818,7 +821,7 @@ $$ \boxed{\frac{d}{dx} \left( x^{\sqrt{x}} \right) = x^{\sqrt{x}} \left( \frac{2
 
 ###  *expand knowledge: The number* $e$ *as a Limit*
 #### Derivation:
-1. **Given** the natural logarithm function $ f(x) = \ln x $, its derivative is:
+1. **Given** the natural logarithm function $f(x) = \ln x$, its derivative is:
 
 $$ f'(x) = \frac{1}{x} \quad \Rightarrow \quad f'(1) = 1 $$
 
@@ -839,7 +842,7 @@ $$ e^1 = e^{\lim_{x \to 0} \ln\left( (1+x)^{1/x} \right)} = \lim_{x \to 0} (1+x)
 $$ \boxed{e = \lim_{x \to 0} (1+x)^{1/x}} $$
 
 #### Alternative Form ($n \to \infty$):
-Let \( n = 1/x \). As \( x \to 0^+ \), \( n \to \infty \):
+Let $n = 1/x$. As $x \to 0^+$, $n \to \infty$:
 
 $$ \boxed{e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n } $$
 
@@ -866,11 +869,13 @@ $$ f(x) = \sin x \quad \Rightarrow \quad f'(x) = \cos x $$
 2. **Evaluate at $x = 0$**:
 
 $$ f(0) = \sin 0 = 0 $$
+
 $$ f'(0) = \cos 0 = 1 $$
 
 3. **Linearization (tangent line approximation)**:
 
 $$ L(x) = f(0) + f'(0)(x - 0) = 0 + 1 \cdot x $$
+
 $$ \boxed{L(x) = x} $$
 
 4. **Linear approximation**:
@@ -882,14 +887,16 @@ $$ \boxed{\sin x \approx x} \quad \text{(near } x = 0) $$
 
 $$ f(x) = \cos x \quad \Rightarrow \quad f'(x) = -\sin x $$
 
-2. **Evaluate at \( x = 0 \)**:
+2. **Evaluate at $x = 0$**:
 
 $$ f(0) = \cos 0 = 1 $$
+
 $$ f'(0) = -\sin 0 = 0 $$
 
 3. **Linearization**:
 
 $$ L(x) = f(0) + f'(0)(x - 0) = 1 + 0 \cdot x $$
+
 $$ \boxed{L(x) = 1} $$
 
 4. **Linear approximation**:
@@ -899,7 +906,7 @@ $$ \boxed{\cos x \approx 1} \quad \text{(near } x = 0) $$
 #### Key Observations:
 - These approximations are most accurate when $x$ is near 0 (typically $|x| < 0.1$ radians)
 - For small angles $\theta$ (in radians):
-  - $ \sin \theta \approx \theta $
+  - $\sin \theta \approx \theta$
   - $\cos \theta \approx 1$
   - $\tan \theta \approx \theta$
 - The error in these approximations increases as $|x|$ grows
@@ -916,7 +923,7 @@ $$
 <img src="images/differential.png">
 
 **Example:**
-Find the differential $dy for $y = x^2$:
+Find the differential $dy$ for $y = x^2$:
 
 1. **Find the derivative**:
 
@@ -969,6 +976,7 @@ $$ \coth x = \frac{\cosh x}{\sinh x} = \frac{e^x + e^{-x}}{e^x - e^{-x}} $$
 1. **Negative Argument**:
 
 $$ \sinh(-x) = -\sinh x $$
+
 $$ \cosh(-x) = \cosh x $$
 
 2. **Pythagorean Identity**:
@@ -978,17 +986,20 @@ $$ \cosh^2 x - \sinh^2 x = 1 $$
 3. **Derivative Relationships**:
 
 $$ \frac{d}{dx} \sinh x = \cosh x $$
+
 $$ \frac{d}{dx} \cosh x = \sinh x $$
 
 #### Angle Sum Identities:
 4. **Addition Formulas**:
 
 $$ \sinh(x + y) = \sinh x \cosh y + \cosh x \sinh y $$
+
 $$ \cosh(x + y) = \cosh x \cosh y + \sinh x \sinh y $$
 
 5. **Double Angle**:
 
 $$ \sinh(2x) = 2\sinh x \cosh x $$
+
 $$ \cosh(2x) = \cosh^2 x + \sinh^2 x $$
 
 #### Reciprocal Identities:
@@ -1059,7 +1070,7 @@ Using the quadratic formula $z = \frac{2x \pm \sqrt{(2x)^2 + 4}}{2}$:
 
 $$ z = \frac{2x \pm \sqrt{4x^2 + 4}}{2} = x \pm \sqrt{x^2 + 1} $$
  
-Since $z = e^y > 0$ and $x - \sqrt{x^2 + 1} < 0$ (because $ \sqrt{x^2 + 1} > |x|$ ), we discard the negative solution:
+Since $z = e^y > 0$ and $x - \sqrt{x^2 + 1} < 0$ (because $\sqrt{x^2 + 1} > |x|$), we discard the negative solution:
 
 $$ e^y = x + \sqrt{x^2 + 1} $$
 
@@ -1079,7 +1090,7 @@ $$ \boxed{\sinh^{-1}x = \ln\left(x + \sqrt{x^2 + 1}\right)} $$
 $$ \cosh^{-1}x = \ln\left(x + \sqrt{x^2 - 1}\right) \quad \text{for } x \geq 1 $$
 
    *Note*:  
-   The principal branch requires \( x \geq 1 \) and returns non-negative values.
+   The principal branch requires $x \geq 1$ and returns non-negative values.
 
 3. **Inverse Hyperbolic Tangent**:
 
