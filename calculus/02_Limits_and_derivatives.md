@@ -719,6 +719,7 @@ Since $\ln x$ requires $x > 0$, $f$ is continuous on $(0, 1)$ and $(1, \infty)$.
 
 
 **Example 2** Evaluate 
+
 $$
 \lim_{x \to \pi} \frac{\sin x}{2 + \cos x}
 $$
