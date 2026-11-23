@@ -1061,14 +1061,16 @@ f'(0) = \lim_{h \to 0} \frac{|h| - 0}{h} = \lim_{h \to 0} \frac{|h|}{h}
 $$
 
 - **Right-hand limit** ($h \to 0^+$):
-  $$
-  \lim_{h \to 0^+} \frac{h}{h} = 1
-  $$
+  
+$$
+\lim_{h \to 0^+} \frac{h}{h} = 1
+$$
 
 - **Left-hand limit** ($h \to 0^-$):
-  $$
-  \lim_{h \to 0^-} \frac{-h}{h} = -1
-  $$
+  
+$$
+\lim_{h \to 0^-} \frac{-h}{h} = -1
+$$
 
 Since the left and right limits disagree, $f'(0)$ **does not exist**.
 
