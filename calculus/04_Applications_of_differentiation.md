@@ -202,6 +202,53 @@ $$
 f(x) = t(x) + c  \quad \text{for some constant } c.
 $$
 
+### The Generalized Mean-Value Theorem
+
+If functions $f$ and $g$ are both continuous on $[a, b]$ and differentiable on $(a, b)$, and if $g'(x) \neq 0$ for every $x$ in $(a, b)$, then there exists a number $c$ in $(a, b)$ such that
+
+$$
+\boxed{\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)}{g'(c)}}
+$$
+
+> 📝 **Note:** Taking $g(x) = x$ gives back the ordinary Mean Value Theorem. This theorem is the key tool used to prove L'Hôpital's Rule (Section 4.4).
+
+#### Proof
+
+**Step 1: The denominator is not zero.**  
+Suppose $g(b) = g(a)$. Then by the Mean Value Theorem (or Rolle's Theorem) applied to $g$, there would be some $c$ in $(a, b)$ with $g'(c) = 0$, contradicting the hypothesis $g'(x) \neq 0$. Hence $g(b) - g(a) \neq 0$, and the left-hand side is defined.
+
+**Step 2: Build an auxiliary function.**  
+Define
+
+$$
+h(x) = \big(f(b) - f(a)\big)\big(g(x) - g(a)\big) - \big(g(b) - g(a)\big)\big(f(x) - f(a)\big)
+$$
+
+Then $h$ is continuous on $[a, b]$ and differentiable on $(a, b)$, because $f$ and $g$ are. Checking the endpoints:
+
+$$
+\begin{aligned}
+h(a) &= \big(f(b) - f(a)\big) \cdot 0 - \big(g(b) - g(a)\big) \cdot 0 = 0 \\
+h(b) &= \big(f(b) - f(a)\big)\big(g(b) - g(a)\big) - \big(g(b) - g(a)\big)\big(f(b) - f(a)\big) = 0
+\end{aligned}
+$$
+
+**Step 3: Apply Rolle's Theorem.**  
+Since $h(a) = h(b)$, Rolle's Theorem gives a number $c$ in $(a, b)$ with $h'(c) = 0$:
+
+$$
+h'(c) = \big(f(b) - f(a)\big)g'(c) - \big(g(b) - g(a)\big)f'(c) = 0
+$$
+
+**Step 4: Rearrange.**  
+Since $g'(c) \neq 0$ and $g(b) - g(a) \neq 0$, divide both sides by $g'(c)\big(g(b) - g(a)\big)$:
+
+$$
+\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)}{g'(c)}
+$$
+
+which completes the proof. $\blacksquare$
+
 ## 4.3 How Derivatives Affect the Shape of a Graph
 
 ### 4.3.1 📈 Increasing/Decreasing Test
