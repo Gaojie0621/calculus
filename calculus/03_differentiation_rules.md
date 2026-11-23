@@ -164,6 +164,55 @@ $$
 \frac{d}{dx}\left[f(x)g(x)\right] = f(x)\frac{d}{dx}[g(x)] + g(x)\frac{d}{dx}[f(x)]
 $$
 
+#### Products of More Than Two Functions
+The Product Rule can be extended to products of any number of factors; for instance,
+
+$$
+\begin{aligned}
+(fgh)'(x) &= f'(x)(gh)(x) + f(x)(gh)'(x) \\
+&= f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x)
+\end{aligned}
+$$
+
+In general, the derivative of a product of $n$ functions will have $n$ terms; each term will be the same product but with one of the factors replaced by its derivative:
+
+$$
+(f_1 f_2 f_3 \cdots f_n)' = f_1' f_2 f_3 \cdots f_n + f_1 f_2' f_3 \cdots f_n + \cdots + f_1 f_2 f_3 \cdots f_n'
+$$
+
+### The Reciprocal Rule
+If $f$ is differentiable at $x$ and $f(x) \neq 0$, then $\frac{1}{f}$ is differentiable at $x$, and
+
+$$
+\boxed{\left(\frac{1}{f}\right)'(x) = \frac{-f'(x)}{\left(f(x)\right)^2}}
+$$
+
+*(This is the special case of the Quotient Rule with numerator $1$.)*
+
+#### The Power Rule for Negative Integers
+We can use the Reciprocal Rule to confirm the General Power Rule for negative integers:
+
+$$
+\frac{d}{dx} x^{-n} = -n x^{-n-1}
+$$
+
+since we have already proved the rule for positive integers. We have
+
+$$
+\frac{d}{dx} x^{-n} = \frac{d}{dx}\left(\frac{1}{x^n}\right) = \frac{-n x^{n-1}}{\left(x^n\right)^2} = -n x^{-n-1}
+$$
+
+**Example** (Differentiating sums of reciprocals)
+
+$$
+\begin{aligned}
+\frac{d}{dx}\left(\frac{x^2 + x + 1}{x^3}\right) &= \frac{d}{dx}\left(\frac{1}{x} + \frac{1}{x^2} + \frac{1}{x^3}\right) \\
+&= \frac{d}{dx}\left(x^{-1} + x^{-2} + x^{-3}\right) \\
+&= -x^{-2} - 2x^{-3} - 3x^{-4} \\
+&= -\frac{1}{x^2} - \frac{2}{x^3} - \frac{3}{x^4}
+\end{aligned}
+$$
+
 ### 3.2.2 Proof of the Quotient Rule
 
 Let $u = f(x)$ and $v = g(x) \neq 0$ be differentiable functions. The change in their quotient is:
