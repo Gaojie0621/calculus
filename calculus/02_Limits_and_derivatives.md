@@ -942,7 +942,57 @@ $$
 $$
 
 ## 5. Derivatives and Rates of Change
-### 5.1 **Definition of the Derivative at a Point**:
+### 5.1 Tangent Lines and Normals
+
+A reasonable definition of tangency can be stated in terms of limits. If $Q$ is a point on a curve $C$ different from $P$, then the line through $P$ and $Q$ is called a **secant line** to the curve. This line rotates around $P$ as $Q$ moves along the curve. If $L$ is a line through $P$ whose slope is the limit of the slopes of these secant lines $PQ$ as $Q$ approaches $P$ along $C$, then we say that $L$ is **tangent** to $C$ at $P$.
+
+<img src="images/figure_2.4.png" alt="Secant lines PQ approaching the tangent line L at P" width="500">
+
+#### Nonvertical Tangent Lines
+Suppose that the function $f$ is continuous at $x = x_0$ and that
+
+$$
+\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = m
+$$
+
+exists. Then the straight line having slope $m$ and passing through the point $P = (x_0, f(x_0))$ is called the **tangent line** (or simply the **tangent**) to the graph of $y = f(x)$ at $P$. An equation of this tangent is
+
+$$
+y = m(x - x_0) + y_0
+$$
+
+#### Vertical Tangents
+If $f$ is continuous at $P = (x_0, y_0)$, where $y_0 = f(x_0)$, and if either
+
+$$
+\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = \infty \quad \text{or} \quad \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = -\infty
+$$
+
+then the vertical line $x = x_0$ is tangent to the graph $y = f(x)$ at $P$.
+
+If the limit of the Newton quotient fails to exist in any other way than by being $\infty$ or $-\infty$, the graph $y = f(x)$ has **no tangent line** at $P$.
+
+#### Normals
+If a curve $C$ has a tangent line $L$ at point $P$, then the straight line $N$ through $P$ perpendicular to $L$ is called the **normal** to $C$ at $P$:
+
+$$
+\text{slope of the normal} = -\frac{1}{\text{slope of the tangent}}
+$$
+
+**Example** Find the tangent and the normal to $y = \sqrt{x}$ at $(4, 2)$.
+
+**Solution** The slope of the tangent is
+
+$$
+m = \lim_{h \to 0} \frac{\sqrt{4 + h} - 2}{h} = \lim_{h \to 0} \frac{(4 + h) - 4}{h\left(\sqrt{4 + h} + 2\right)} = \lim_{h \to 0} \frac{1}{\sqrt{4 + h} + 2} = \frac{1}{4}
+$$
+
+- **Tangent:** $y = \frac{1}{4}(x - 4) + 2$, that is, $y = 1 + \frac{x}{4}$
+- **Normal:** slope $= -\frac{1}{1/4} = -4$, so $y = -4(x - 4) + 2$, that is, $y = 18 - 4x$
+
+<img src="images/fig_tan_and_normal.png" alt="The tangent (blue) and normal (green) to y = sqrt(x) at (4, 2)" width="400">
+
+### 5.2 **Definition of the Derivative at a Point**:
 The derivative of a function $f$ at a point $a$, denoted by $f'(a)$, is defined as:
 
 $$
@@ -984,8 +1034,8 @@ $$
 
 <img src="images/derivative.png" alt="rate of change" width = 300 height = 300>
 
-### **5.2 The Derivative as a Function**
-#### **5.2.1 Definition of the Derivative**:
+### **5.3 The Derivative as a Function**
+#### **5.3.1 Definition of the Derivative**:
 
 $$
 \boxed{f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}}
@@ -1018,14 +1068,14 @@ $$
 f'(x) = \boxed{-\dfrac{3}{(2 + x)^2}}
 $$
 
-#### 5.2.2 Derivative Notations
+#### 5.3.2 Derivative Notations
 The derivative of $f$ can be represented in multiple equivalent ways:
 
 $$
 f'(x) = y' = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx}f(x) = Df(x) = D_x f(x)
 $$
 
-#### 5.2.3 Definition of Differentiability
+#### 5.3.3 Definition of Differentiability
 A function $f$ is:
 - **Differentiable at a point $a$** if $f'(a)$ exists
 - **Differentiable on an interval** if it is differentiable at every point in:
@@ -1090,7 +1140,7 @@ $$
 
 <img src="images/limit_2.png" alt="|x|" width = 300 height = 300>
 
-#### 5.2.4 Differentiability Implies Continuity
+#### 5.3.4 Differentiability Implies Continuity
 **Theorem**: If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
 
 **Proof Outline:**
