@@ -604,8 +604,8 @@ $$
  **Example** Show that the function $f(x) = 1 - \sqrt{1 - x^2}$ is continuous on the interval $[-1, 1]$.
 
 **Solution** If $-1 < a < 1$, then using the Limit Laws, we have:
-$$
 
+$$
 \begin{align*}
 \lim_{x \to a} f(x) &= \lim_{x \to a} \left(1 - \sqrt{1 - x^2}\right) \\
 &= 1 - \lim_{x \to a} \sqrt{1 - x^2} \quad \\
