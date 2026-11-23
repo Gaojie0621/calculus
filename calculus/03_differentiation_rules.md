@@ -115,7 +115,10 @@ $$
 
 **Key Implications**
  - **Euler's Formula Connection**:
-   $$ \frac{d}{dt}e^{it} = ie^{it} \quad \text{(Essential in complex analysis)} $$
+
+$$ 
+\frac{d}{dt}e^{it} = ie^{it} \quad \text{(Essential in complex analysis)} 
+$$
 
 ## 3.2 The Product and Quotient Rule
 ### 3.2.1 Proof of the Product Rule
